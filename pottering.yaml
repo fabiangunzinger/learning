@@ -24,3 +24,5 @@ dependencies:
   - notebook
   - vega
   - pymc3
+  - pandas-datareader
+  - python-dotenv
