@@ -26,3 +26,4 @@ dependencies:
   - pymc3
   - pandas-datareader
   - python-dotenv
+  - xlrd
