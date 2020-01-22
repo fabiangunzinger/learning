@@ -19,7 +19,7 @@ dependencies:
   - openssl
   - pytest
   - nb_black
-  - altair
+  - altair=4.0
   - vega_datasets
   - notebook
   - vega
