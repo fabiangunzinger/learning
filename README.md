@@ -6,6 +6,7 @@ I want to be fluent in carrying out basic Python data tasks and want to understa
 use for this purpose.
 
 In particular, I want to build fluency in:
+
 - Writing Pythonic code
 - Pandas
 - Data visualisation in Matplotlib, Seaborn, and Altair
@@ -13,7 +14,7 @@ In particular, I want to build fluency in:
 - Functional programming
 - Testing
 
-As a next step, I then want to move on to causal analysis and, after that, machine learning:
+I then want to move on to causal analysis and, after that, machine learning:
 
 - Basic statistics in Python
 - Causal analysis in Python
