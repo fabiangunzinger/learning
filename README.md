@@ -67,3 +67,9 @@ Further topics:
 - Functional programming
 - Testing
 - And then causal analysis, stats, and machine learning. 
+
+
+CS basics
+[Stanford CS 101](http://web.stanford.edu/class/cs101/syllabus.html)
+ 
+

@@ -1,67 +1,237 @@
 
-# Packages
-import pandas as pd
-import numpy as np
-import scipy.io
-import matplotlib.pyplot as plt
+###############################################################################
+# Basics and best practices
+###############################################################################
+
+import this
+
+
+##################
+# Data structures
+##################
+
+# Integers and floats
+
+5
+5.0      # =>      (float)
+5 / 2    # => 2.5  (division)
+5 // 2   # => 2    (integer division)
+5 % 2    # => 1    (modulo operator)
+
+# String
+
+word = 'Just some word'
+word[::-1].lower()
+word.find('so')           # => 5
+word.startswith('Wo')     # => False
+word.isalpha()            # => False (due to spaces)
+word.strip('Just some ')  # => 'word'
+
+list(word)    # Casting to a list
+word.split()
+'-'.join(['Just', 'some', 'word'])
+
+'{} {}'.format('Hello', 'world')
+'{0} {1}, {0}'.format('Hello', 'world')
+'{greeting}, {name}'.format(greeting='Hello', name='world')
+'{} squared is {}'.format(5, 5**2)
+'{:2.1f} squared is {:2.2f}'.format(5, 5**2)
+'{:^12}'.format('Hello')
+'{:*^12}'.format('Hello')
+
+# Boolean
+
+# Array
+
+
+# List
+# is a finite, ordered, mutable sequence of elements
+
+a = [1, 2]
+a.append([3, 4])  # => [1, 2, [3, 4]] (append single element)
+
+a = [1, 2]
+a.extend([3, 4])  # => [1, 2, 3, 4]   (append all elements of iterator)
+
+1 in a    # => True
+'1' in a  # => False (string is not in a)
+
+a = [1, 2, 3]
+del a[2]     # Remove element from list by index
+a.remove(1)  # Remove elemetn from list by value
+a.pop(1)     # => 2 (remove element by index and return)
+
+
+# Tuple
+# is a finite, ordered, immutable sequence of elements
+
+a = 'Hello'
+b = 'World'
+c = a, b
+type(c)  # => tuple
+b, a = c  # Swapping values (can also do directly: b, a = a, b)
+
+def fibonacci(n):
+    """Print out the first n Fibonacci numbers"""
+    a, b = 0, 1
+    for i in range(n):
+        print(a)
+        a, b = b, a + b
+fibonacci(4)
+
+for i, name in enumerate(['Fabian', 'Molly']):
+    print(i, name)
+
+    
+# Dictionary
+
+a = {'cs': [41, 106], 'econ': [101, 1003]}
+b = dict(cs=[41, 106], econ=[101, 1003])
+a == b
+
+cs = a.get('cs')
+math = a.get('math', [])
+num_math = len(math)
+
+b.pop('cs')
+b.pop('math', None)
+del b['econ']
+
+a.keys()
+a.values()
+a.items()
+
+for key, value in a.items():
+    print(key, value)
+
+for key in a:
+    print(key, a[key])
+
+keylist = list(a.keys())
+    
+
+# Set and frozenset
+# Is an unordered, finite collection of distinct, hashable elements.
+
+s = set('mississippi')
+s.add('b')
+s.remove('i')   # KeyError if 'i' is not in set
+s.discard('i')  # Same as remove, but no error
+s.clear()       # Remove all elements
+
+a = set('ab')
+b = set('bc')
+a - b  # => {'a'}            (set difference)
+a | b  # => {'a', 'b', 'c'}  (set union)
+a & b  # => {'b'}            (set intersection)
+a ^ b  # => {'a', 'c'}       (symmetric difference)
+
+a < b   # Strict subset
+a <= b  # Subset or equal to
+a > b   # Strict superset
+a >= b  # Superset or equal to
+
+efficient_letters = 'aklmeficntzy'
+
+def is_efficient(word):
+    for letter in word:
+        if letter not in efficient_letters:
+            return False
+    return True
+is_efficient('efficient')
+
+def is_efficient(word):
+    return set(word) <= set(efficient_letters)
+is_efficient('efficient')
+
+
+# File
+
+
+
+###############
+# Control flow
+###############
+
+# Zero values and empty data structures are 'falsy', everything 
+# else is 'truthy'
+bool(False)    # => False
+bool([])       # => False
+bool(42)       # => True
+bool([1, 2,])  # => True
+
+unicorns = ['ha']
+if unicorns:
+    print("We're in luck!")
+else:
+    print('No unicorns!')
+
+# Deal with errors for as long as required.
+while True:
+    try:
+        n = int(input('How many unicorns would you like? '))
+        break
+    except ValueError:
+        print('Invalid input. Try again and enter an integer.')
+
+# Deal with multiple errors
+try:
+    dangerous_code()
+except SomeError:
+    handle_error()
+except (OneError, OtherError):
+    handle_multiple_errors()
+
+
+# Use errors to handle control flow (use below instead of checking 
+# that file exists)
 import os
-import h5py
-import requests
-from sqlalchemy import create_engine
-from urllib.request import urlretrieve
-from bs4 import BeautifulSoup
-
-# Directories
-codeDir = os.getcwd()
-dataDir = os.path.join(codeDir,'../data')
+try:
+    os.remove('filename')
+except FileNotFoundError:
+    pass
 
 
-# Magic commands
+########    
+# Loops
+########
 
-# ! ls # List content of current dir (! gives system access in IPython)
+for item in iterable:
+    process(item)
+    
+for n in range(1, 5):
+    if n == 3:
+        break           # Interrupts loop
+    print(n)
 
+for n in range(1, 5):
+    if n in [2, 3]:
+        continue        # Skips to next iteration
+    print(n)
 
-# Navigating directories
+question = ['name', 'quest', 'favourite color']
+answer = ['Lancelot', 'the holy grail', 'blue']
+for q, a in zip(question, answer):
+    print('What is your {}? It is {}.'.format(q, a))
 
-cwd = os.getcwd()
-os.listdir(cwd)
+basket = ['pear', 'apple', 'banana', 'apple']
+for f in sorted(set(basket)):
+    print(f)
 
+while condition:
+    do_stuff()
+    
+n = 2
+while n < 10000:
+    print(n)
+    n **= 2
+    
+    
+#################
+# Comprehensions
+#################
 
-# Functions
-
-def echo(n):
-	def inner_echo(word):
-		echoWord = word * n
-		return echoWord
-	return inner_echo
-twiceEcho = echo(2)
-print(twiceEcho('Fabian'))
-
-echoLambda = (lambda word, n: word * n)
-
-letters = ['a', 'b', 'c']
-
-shouts = list(map(lambda l: l + '!!!', letters))
-print(shouts)
-
-
-# Iterables
-
-letters = ['a', 'b', 'c']
-numbers = [1, 2, 3]
-
-for e in enumerate(letters, start=10):
-	print(e)
-
-for l, n in zip(letters, numbers):
-	print(l, n)
-
-print(*zip(letters, numbers))
-
-z = zip(letters, numbers)
-letters, numbers = zip(*z)
-print(letters)
-
+[fn(x) for x in iterable if cond(x)]
 
 # List comprehension
 
@@ -73,8 +243,8 @@ manynums = [num for num in range(100)]
 
 pairs = []
 for num1 in range(0, 2):
-	for num2 in range(3, 7):
-		pairs.append((num1, num2))
+    for num2 in range(3, 7):
+        pairs.append((num1, num2))
 print(pairs)
 
 elegantPairs = [(num1, num2) for num1 in range(0,2) for num2 in range(3,7)]
@@ -90,37 +260,114 @@ print(evenSquares)
 print({num: -num for num in range(9)})
 
 
-# Iterator objects
 
-toTen = (n for n in range(11))
-print(toTen)
-print(next(toTen))
-for n in range(10):
-	print(n)
+
+
+
+######################
+# Functions and files
+######################
+
+def fn_name(param1, param2):
+    value = do_something()
+    return value
+
+
+def is_prime(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+is_prime(262)
+is_prime(263)
+
+
+def echo(n):
+    def inner_echo(word):
+        return word * n
+    return inner_echo
+twiceEcho = echo(2)
+twiceEcho('Fab')
+
+echoLambda = (lambda word, n: word * n)
+echoLambda(5, 'Fab')
+
+letters = ['a', 'b', 'c']
+shouts = list(map(lambda l: l + '!!!', letters))
+print(shouts)
+
+
+#######################################
+# Data model - everything is an object
+#######################################
+
+# Everything is an object
+isinstance(4, object)       # => True
+isinstance([1, 2], object)  # => True
+
+# Objects have identity
+id(4)  # => 4501558496 (e.g.)
+
+# Objects have type
+type(4)                      # => int
+isinstance(type(4), object)  # => Types are also objects
+
+# Objects have value
+(41).__sizeof__()  # => 28 (bytes)
+
+# Variables are references to objects
+x = 4
+y = x
+x == y  # => True (both refer to object 4)
+
+# Duck typing (if it walks, swims, and quacks like a duck...)
+def compute(a, b, c):
+    return (a + b) * c
+compute(1, 2, 3)
+compute([1], [2, 3], 4)
+compute('lo', 'la', 3)
+
+# is vs. ==
+1 == 1.0  # => True   (use to compare values)
+1 is 1.0  # => False  (is checks for identity, not value)
+
+
+#########################
+# Functional programming
+#########################
+
+
+###########
+# File I/O
+###########
+
+# Navigate directory
+import os
+cwd = os.getcwd()
+os.listdir(cwd)
+dataDir = os.path.join(cwd,'../data')
+
+# Ensure that files are closed automatically
+from urllib.request import urlopen
+with urlopen('http://composingprograms.com/shakespeare.txt') as f:
+    text = f.read(200)
+text
 
 
 # Importing data
-# --------------------------------------------------------------------------- #
 
 # Text files
 with open('name_of_file.txt', mode='r') as file:
-	print(file.read())
+    print(file.read())
 with open('name_of_file.txt', mode='r') as file:
-	print(file.readline())
+    print(file.readline())
 
 
 # Flat files
 
-file = os.path.join(dataDir, 'titanic.csv')
-df = pd.read_csv(file, sep='\t')
-# Flat file without column labels and with 999 denoting missing values
-col_names = ['col1', 'col2', ...]
-df = pd.read_csv(file, header=None, names=col_names, na_values='999')
-# Same as above but col 1 and 2 have different null values and using year, month, day values from columns 0, 1, 2 to create single data variable
-df = pd.read_csv(file, header=None, names=col_names, 
-				na_values={'col1' : ['-1'], 'col2' : ['999']},
-				parse_dates=[[0, 1, 2]])
-sp500 = pd.read_csv('sp500.csv', parse_dates=True, index_col='Date')
+df = pd.read_csv(file, sep='\t', header=None, names=col_names,
+                 na_values={'col1' : ['-1'], 'col2' : ['999']},
+                 parse_dates=[[0, 1, 2]])
 
 
 # Excel
@@ -131,16 +378,9 @@ print(xlsx.sheet_names)
 df = xlsx.parse('Sheet1', skiprows=[0], usecols=[0, 2], names=['id', 'urn'])
 print(df.head())
 
-
-# Stata files
-
-file = os.path.join(dataDir, 'carrera2018limits.dta')
-df = pd.read_stata(file)
-print(df.head())
-
-
 # HDF5
-
+import h5py
+import os
 file = os.path.join(dataDir, 'LIGO_data.hdf5')
 data = h5py.File(file, mode='r')
 print(type(data))
@@ -150,14 +390,6 @@ group = data['strain']
 for key in group.keys():
 	print(key)
 strain = data['strain']['Strain'].value
-
-num_samples = 10000
-time = np.arange(0, 1, 1/num_samples)
-
-plt.plot(time, strain[:num_samples])
-plt.xlabel('GPS Time (seconds)')
-plt.ylabel('Strain')
-# plt.show()
 
 
 # Matlab
@@ -214,6 +446,39 @@ for key, value in json_data.items():
 	print(key + ":", value)
 
 
+
+
+
+
+
+
+# Iterables
+
+letters = ['a', 'b', 'c']
+numbers = [1, 2, 3]
+
+for e in enumerate(letters, start=10):
+	print(e)
+
+for l, n in zip(letters, numbers):
+	print(l, n)
+
+print(*zip(letters, numbers))
+
+z = zip(letters, numbers)
+letters, numbers = zip(*z)
+print(letters)
+
+
+# Iterator objects
+
+toTen = (n for n in range(11))
+print(toTen)
+print(next(toTen))
+for n in range(10):
+    print(n)
+
+
 # Manually creating df from dictionary
 
 data = {'day' : ['Mo', 'Tu'],
@@ -228,9 +493,9 @@ hour = [12, 14]
 training = ['hiit', 'push']
 labels = ['day', 'hour', 'type']
 cols = [day, hour, training]
-zipped = list(zip(labels, cols))
-data = dict(zipped)
+data = dict(zip(labels, cols))
 df = pd.DataFrame(data)
+df.head()
 
 
 # Importing multiple files
@@ -246,9 +511,15 @@ files = ["%s_top5.csv" %medal for medal in ['silver', 'gold', 'bronze']]
 print(files)
 
 
-# --------------------------------------------------------------------------- #
-# Preparing data (put data into needed shape and form)
-# --------------------------------------------------------------------------- #
+########
+# NumPy
+########
+
+
+
+#########
+# Pandas
+#########
 
 
 # Append
@@ -319,11 +590,6 @@ weather4 = weather1.sort_values('Max TemperatureF')
 weather3 = weather1.reindex(year).ffill()
 
 
-
-
-# --------------------------------------------------------------------------- #
-# Cleaning data (clean values, generate new variables, etc.)
-# --------------------------------------------------------------------------- #
 
 # Stuff that doesn't fit anywhere else
 
@@ -711,9 +977,9 @@ df.mean(axis='columns').plot()
 
 
 
-# -----------------------------------------------------------------------------
+###########
 # Plotting
-# -----------------------------------------------------------------------------
+###########
 
 # Style options
 
