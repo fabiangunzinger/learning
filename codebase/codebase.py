@@ -6,6 +6,35 @@
 import this
 
 
+#############
+# Code style
+#############
+
+"""Based on https://www.python.org/dev/peps/pep-0008/
+
+Online checker: http://pep8online.com
+
+
+Math operators
+---------------
+2*3 - 1 
+
+x*x + y*y
+
+(a+b) * (c-d)
+
+Trailing commas
+----------------
+
+files = [
+    'text.txt',
+    'dir.csv',
+    ]
+
+
+"""
+
+
 ##################
 # Data structures
 ##################
@@ -64,6 +93,7 @@ a.pop(1)     # => 2 (remove element by index and return)
 
 # Tuple
 # is a finite, ordered, immutable sequence of elements
+# (frozen sequence of objects)
 
 a = 'Hello'
 b = 'World'
@@ -235,38 +265,90 @@ while n < 10000:
 
 # List comprehension
 
-nums = [1, 2, 3]
-squaredNums = [num ** 2 for num in nums]
-print(squaredNums)
+[n**2 for n in range(10)]
+[n**2 for n in range(10) if n**2 < 50]
+[n**2 if n**2 < 50 else 0 for n in range(10)]
 
-manynums = [num for num in range(100)]
-
-pairs = []
-for num1 in range(0, 2):
-    for num2 in range(3, 7):
-        pairs.append((num1, num2))
-print(pairs)
-
-elegantPairs = [(num1, num2) for num1 in range(0,2) for num2 in range(3,7)]
-matrix = [[col for col in range(0,5)] for row in range(0,5)]
-print(matrix)
-
-evenSquares = [num ** 2 if num % 2 == 0 else 0 for num in range(0,10)]
-print(evenSquares)
-
+[(a, b) for a in range(5) for b in range(3)]     # Permutations
+[[col for col in range(5)] for row in range(5)]  # Create a matrix
 
 # Dict comprehensions
 
-print({num: -num for num in range(9)})
+{key_fun(x): val_fun(x) for x in iterable}
+
+{num: -num for num in range(9)}
 
 
+# Set comprehensions
+
+{fun(x) for x in iterable}
 
 
+[n + (n + 1) for n in [0, 1, 2, 3]]
+[n % 3 == 0 for n in [3, 8, 9, 5]]
+[e[0].upper() for e in ['apple', 'orange', 'pear']]
+[(e, len(e)) for e in ['apple', 'orange', 'pear']]
 
 
 ######################
 # Functions and files
 ######################
+
+""" Aside: parameter passing paradigms
+
+(Mainly based on: https://robertheaton.com/2014/02/09/pythons-pass-by-object-reference-as-explained-by-philip-k-dick/)
+
+A variable is a container that points to an object in memory: in a = [] the variable a points to the empty list, but it is not itself the empty list. Can think of variables as boxes we put objects into.
+
+Below two functions help understand the difference.
+
+def reassign(list):
+    list = [0, 1]
+
+def append(list):
+    list.append(1)
+
+
+Pass-by-reference: 
+------------------
+The variable, rather than its content, is passed to the function (and content implicitly comes withi it).
+
+list = [0]
+reassign(list)
+list  # => [0, 1]
+
+list = [0]
+append(list)
+list  # => [0, 1]
+
+
+Pass-by-value:
+---------------
+The object, rather than the variable, is passed to the function (precisely: the function receives a copy of the objects, which are stored separately in memory, and effectively creates its own box to put them into). Hence, outside the function, nothing happens to the original object.
+
+list = [0]
+reassign(list)
+list  # => [0]
+
+list = [0]
+append(list)
+list  # => [0]
+
+
+Python: pass-by-object-reference:
+----------------------------------
+
+list = [0]
+reassign(list)
+list  # => [0]
+
+list = [0]
+append(list)
+list  # => [0, 1]
+
+"""
+
+# Basics
 
 def fn_name(param1, param2):
     value = do_something()
@@ -281,7 +363,6 @@ def is_prime(n):
 is_prime(262)
 is_prime(263)
 
-
 def echo(n):
     def inner_echo(word):
         return word * n
@@ -289,12 +370,99 @@ def echo(n):
 twiceEcho = echo(2)
 twiceEcho('Fab')
 
+
+def ask_yn(prompt,
+           retries=4,
+           complaint='Enter Y of N!'):
+    for i in range(retries):
+        ans = input(prompt)
+        
+        if ans in 'yY':
+            return True
+        if ans in 'nN':
+            return False
+        
+        print(complaint)
+
+ask_yn('Ok to overwrite?')
+
+
+# Lambda functions
+
 echoLambda = (lambda word, n: word * n)
 echoLambda(5, 'Fab')
 
 letters = ['a', 'b', 'c']
 shouts = list(map(lambda l: l + '!!!', letters))
 print(shouts)
+
+
+# Variadic positional arguments
+
+def scaled_sum(*args, scale=1):
+    return scale * sum(args)
+
+scaled_sum(1, 2, 3)
+scaled_sum(1, 5)
+scaled_sum(1, 5, scale=10)
+
+
+# Unpacking variadic positional arguments (to get sum of primes < 100)
+
+def is_prime(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+primes = [p for p in range(1, 100) if is_prime(p)]
+scaled_sum(*primes)  # '*' unpacks iterables inside function 
+
+
+# Variadic keyword arguments
+
+def stylize_quote(quote, **speaker_info):
+    print('> {}'.format(quote))
+    print('-' * (len(quote) + 2))
+    
+    for k, v in speaker_info.items():
+        print('{}: {}'.format(k, v))
+
+stylize_quote(
+    'It music be the food of love, play on.',
+    act=1,
+    scene=1,
+    playwright='Shakespeare'
+)
+
+# Unpacking variadic keyword arguments
+
+info = {
+    'speaker': 'Iron Man',
+    'year': 2012,
+    'movie': 'The Avengers'
+}
+
+stylize_quote('Doth mother know you weareth her drapes?', **info)
+
+
+# Example
+
+'{0}{b}{1}{a}{0}{2}'.format(
+    1, 2, 3, a='b', b='k'    # args = (1, 2, 3), kwargs = {'a': 'b', 'b': 'k'}
+)
+
+
+# Function best practices
+
+def my_func():
+    """Write a one-line summary here
+    
+    And a more elaborate description from here onwards.
+    """
+print(my_func.__doc__)
+
+
 
 
 #######################################
