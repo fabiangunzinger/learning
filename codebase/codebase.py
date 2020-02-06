@@ -65,8 +65,10 @@ word.split()
 '{greeting}, {name}'.format(greeting='Hello', name='world')
 '{} squared is {}'.format(5, 5**2)
 '{:2.1f} squared is {:2.2f}'.format(5, 5**2)
+# {:{padding_pattern}{alignment - <, ^, >}{padding}}
 '{:^12}'.format('Hello')
 '{:*^12}'.format('Hello')
+'{:->12}'.format('Fab')
 
 # Boolean
 
@@ -127,9 +129,9 @@ b.pop('cs')
 b.pop('math', None)
 del b['econ']
 
-a.keys()
-a.values()
-a.items()
+a.keys()    # => <['cs', 'econ']>
+a.values()  # => <[[41, 106], [101], [1003]] 
+a.items()   # => <[('cs', [41, 106]), ('econ', ['101', '1003'])]
 
 for key, value in a.items():
     print(key, value)
@@ -256,10 +258,12 @@ while n < 10000:
     print(n)
     n **= 2
     
+
     
 #################
 # Comprehensions
 #################
+
 
 [fn(x) for x in iterable if cond(x)]
 
@@ -290,9 +294,11 @@ while n < 10000:
 [(e, len(e)) for e in ['apple', 'orange', 'pear']]
 
 
-######################
-# Functions and files
-######################
+
+############
+# Functions
+############
+
 
 """ Aside: parameter passing paradigms
 
@@ -464,6 +470,19 @@ print(my_func.__doc__)
 
 
 
+def make_table(**kwargs):
+    print(kwargs.values())
+    
+tab = {'first_name': 'Fabian', 
+       'family_name': 'Gunzinger'}
+
+max(len(k) for k in tab.keys())
+
+
+        
+
+
+
 
 #######################################
 # Data model - everything is an object
@@ -612,10 +631,6 @@ r = requests.get(url)
 json_data = r.json()
 for key, value in json_data.items():
 	print(key + ":", value)
-
-
-
-
 
 
 
@@ -1623,6 +1638,75 @@ df.to_excel(out_exls, index=False)
 
 
 
+
+# Exercises to remember (and eventually delete)
+
+# Me
+def speak_excitedly(message, num_exclamations=0, enthusiasm=False):
+    if enthusiasm:
+        print(message.upper() + '!' * num_exclamations)
+    else:
+        print(message + '!' * num_exclamations)
+
+speak_excitedly("let's go Stanford", 2, enthusiasm=True)
+speak_excitedly('I love Python')
+
+# Solution
+
+def speak_excitedly(message, num_exclamations=0, enthusiasm=False):
+    """Return a message with exclamation points, possibly capitalised."""
+    message += '!' * num_exclamations
+    if enthusiasm:
+        return message.upper()
+    return message
+    
+speak_excitedly("let's go Stanford", 2, enthusiasm=True)
+speak_excitedly('I love Python', 1)
+
+
+def make_table(key_justify='left', value_justify='right', **table_elements):
+    """
+    Construct table of key-value pairs specified as keyword arguments.
+    
+    More elaborate description with example...
+    """
+    
+    # Map from human-readable justifications to .format alignmend specifiers
+    justification = {
+        'left': '<',
+        'right': '>', 
+        'center': '^'
+    }
+    if key_justify not in justification or value_justify not in justification:
+        raise ValueError('Invalid justification specifier. \
+                         Choose from {}'.format(list(justification.keys())))
+       
+    key_alignment_specifier = justification[key_justify]
+    value_alignment_specifier = justification[value_justify]
+    
+    max_key_length = max(len(key) for key in table_elements.keys())
+    max_value_length = max(len(value) for value in table_elements.values())
+    
+    # '| ' + padded_key + ' | ' + padded_value + ' |' 
+    total_length = 2 + max_key_length + 3 + max_value_length + 2
+    
+    print('=' * total_length)
+    for key, value in table_elements.items():
+        print('| {:{key_align}{key_padding}} | {:{value_align}{value_padding}} |'
+              .format(key, value,
+                      key_align=key_alignment_specifier,
+                      key_padding=max_key_length,
+                      value_align=value_alignment_specifier,
+                      value_padding=max_value_length
+                     )
+             )
+    print('=' * total_length)
+
+make_table(key_justify='left', value_justify='right', 
+           name='Fabian',
+           surname='Gunzinger',
+           fav_movement='Handstand',
+          )
 
 
 
