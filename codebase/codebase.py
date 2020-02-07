@@ -1,14 +1,16 @@
+#!/usr/bin/env python
 
 ###############################################################################
 # Basics and best practices
 ###############################################################################
 
-import this
-
 
 #############
 # Code style
 #############
+
+
+import this
 
 """Based on https://www.python.org/dev/peps/pep-0008/
 
@@ -35,9 +37,48 @@ files = [
 """
 
 
+
+#######################################
+# Data model - everything is an object
+#######################################
+
+
+# Everything is an object
+isinstance(4, object)       # => True
+isinstance([1, 2], object)  # => True
+
+# Objects have identity
+id(4)  # => 4501558496 (e.g.)
+
+# Objects have type
+type(4)                      # => int
+isinstance(type(4), object)  # => Types are also objects
+
+# Objects have value
+(41).__sizeof__()  # => 28 (bytes)
+
+# Variables are references to objects
+x = 4
+y = x
+x == y  # => True (both refer to object 4)
+
+# Duck typing (if it walks, swims, and quacks like a duck...)
+def compute(a, b, c):
+    return (a + b) * c
+compute(1, 2, 3)
+compute([1], [2, 3], 4)
+compute('lo', 'la', 3)
+
+# is vs. ==
+1 == 1.0  # => True   (use to compare values)
+1 is 1.0  # => False  (is checks for identity, not value)
+
+
+
 ##################
 # Data structures
 ##################
+
 
 # Integers and floats
 
@@ -185,6 +226,7 @@ is_efficient('efficient')
 # Control flow
 ###############
 
+
 # Zero values and empty data structures are 'falsy', everything 
 # else is 'truthy'
 bool(False)    # => False
@@ -224,9 +266,11 @@ except FileNotFoundError:
     pass
 
 
+
 ########    
 # Loops
 ########
+
 
 for item in iterable:
     process(item)
@@ -468,60 +512,220 @@ def my_func():
     """
 print(my_func.__doc__)
 
-
-
-def make_table(**kwargs):
-    print(kwargs.values())
-    
-tab = {'first_name': 'Fabian', 
-       'family_name': 'Gunzinger'}
-
-max(len(k) for k in tab.keys())
-
-
         
-
-
-
-
-#######################################
-# Data model - everything is an object
-#######################################
-
-# Everything is an object
-isinstance(4, object)       # => True
-isinstance([1, 2], object)  # => True
-
-# Objects have identity
-id(4)  # => 4501558496 (e.g.)
-
-# Objects have type
-type(4)                      # => int
-isinstance(type(4), object)  # => Types are also objects
-
-# Objects have value
-(41).__sizeof__()  # => 28 (bytes)
-
-# Variables are references to objects
-x = 4
-y = x
-x == y  # => True (both refer to object 4)
-
-# Duck typing (if it walks, swims, and quacks like a duck...)
-def compute(a, b, c):
-    return (a + b) * c
-compute(1, 2, 3)
-compute([1], [2, 3], 4)
-compute('lo', 'la', 3)
-
-# is vs. ==
-1 == 1.0  # => True   (use to compare values)
-1 is 1.0  # => False  (is checks for identity, not value)
-
 
 #########################
 # Functional programming
 #########################
+
+"""
+
+A programming paradigm built on the idea of composing programs of functions, 
+rather than sequential steps of execution.
+
+Advantages of functional programming
+-------------------------------------
+- Simplifies debugging
+- Shorter and cleaner code
+- Modular and reusable code
+
+
+Memory and speed considerations
+--------------------------------
+- Map/filter more memory efficient because they compute elements only when called, while list comprehension buffers them all.
+- Call to map/filter if you pass lambda comes with extra function overhead which list comprehension doesn't have, which makes the latter usually faster.
+
+"""
+
+
+# Procedural programming - "program flow"
+def get_odds(arr):
+    return_list = []
+    for elem in arr:
+        if elem % 2 == 1:
+            return_list.append(elem)
+    return return_list
+
+# Functional programming - "programs are sets of functions"
+def get_odds(arr):
+    return list(filter(lambda elem: elem % 2 ==1, nums))
+
+
+# Lambda function
+
+"""
+Pass as a parameter into other functions to customise their behaviour.
+"""
+
+pairs = [(3, 2), (-1, 5), (4, 4), (8, 1)]
+
+max(pairs, key=lambda tup: tup[1])    # Find based on second element
+
+sorted(pairs, key=lambda tup: tup[1]) # Sort by second element
+
+
+# Map function
+
+"""
+Apply a function elementwise to an array and store the result.
+"""
+
+def lengths(arr):                         # Procedural 
+    lengths = []
+    for elem in arr:
+        lengths.append(len(elem))
+    return lengths
+
+def lengths(arr):                         # Using list comprehension
+    return [len(elem) for elem in arr]
+
+def lengths(arr):                         # Functional
+    return list(map(len, ['fab', 'mo']))
+
+
+
+# Filter function
+
+"""
+Extract elements of an iterable which fulfill certain criteria.
+"""
+
+## Procedural
+def starts_with_m(arr):
+    return_array = []
+    for elem in arr:
+        if elem.lower().startswith('m'):
+            return_array.append(elem)
+    return return_array
+
+## List comprehension
+def starts_with_m(arr): 
+    return [elem for elem in arr if elem.lower().startswith('m')]
+
+## Functional
+def starts_with_m(arr):
+    return list(filter(lambda elem: elem.lower().startswith('f'), arr))
+       
+
+############
+# Iterators
+############
+
+"""
+Finite or infinite streams of data that can be looped over and read into 
+data structures (if they are finite).
+"""
+
+# Filter (and map) create iterators
+names = ['Zebra', 'Kangaroo', 'Elephant', 'Cat']
+long_names = filter(lambda word: len(word) > 7, names)
+
+for name in long_names:
+    print(name)
+
+# Creating an iterator object
+
+toTen = (n for n in range(11))
+print(toTen)
+print(next(toTen))
+for n in range(10):
+    print(n)
+    
+    
+#############
+# Generators
+#############
+
+"""
+Advantages
+-----------
+
+Allow us to compute data on demand: avoid expensive function calls and reduce memory buffering.
+
+Allow us to represent infinite streams of data.
+"""
+
+def fib(n):                   # Fibonacci sequence as a function...
+    a, b = 0, 1
+    for i in range(n):
+        print(a)
+        a, b = b, a+b
+
+def fib():                    # ... and as a generator 
+    a, b = 0, 1
+    while True:
+        a, b = b, a+b
+        yield a
+
+g = fib()  # Namespace created, fib() pushed to stack
+next(g)
+
+# Lazy generation -- generate Fibonacci sequence on demand
+
+def fibs_under(n):
+    for num in fib():
+        if num > n:
+            break
+        print(num)
+        
+fibs_under(100)
+
+
+#############
+# Decorators
+#############
+
+# We can use functions as arguments in functions
+
+map(lambda x: x**2, [1, 2, 3])
+filter(lambda x: x % 2 == 0, [1, 2, 3])
+
+def do_twice(fn, *args):
+    fn(*args)
+    fn(*args)
+    
+do_twice(print, 'Hello world!')
+
+
+# We can also return functions from functions
+
+def make_divisibility_test(n):
+    def is_divisible_by(m):
+        return m % n == 0
+    return is_divisible_by
+
+test = make_divisibility_test(5)
+test(10)
+test(11)
+
+
+# Decorators take in a function, modity it, and return the modified version
+
+def debug(function):
+    def modified_function(*args, **kwargs):
+        print('Arguments:', args, kwargs)
+        return function(*args, **kwargs)
+    return modified_function
+
+def foo(a, b, c=1):
+    return (a + b) * c
+
+foo = debug(foo)
+
+foo(2, 3)
+foo(2, 3, c=5)
+
+# This is already pretty cool. But, above, we overwrote the namespace 
+# binding of foo in the global scope, which is not cool. 
+# There is a better way:
+
+@debug
+def foo(a, b, c=1):
+    return (a + b) * c
+
+foo(2, 3)
+foo(2, 3, c=5)
+
 
 
 ###########
@@ -652,14 +856,6 @@ z = zip(letters, numbers)
 letters, numbers = zip(*z)
 print(letters)
 
-
-# Iterator objects
-
-toTen = (n for n in range(11))
-print(toTen)
-print(next(toTen))
-for n in range(10):
-    print(n)
 
 
 # Manually creating df from dictionary
