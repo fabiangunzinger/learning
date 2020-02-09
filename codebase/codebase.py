@@ -688,26 +688,9 @@ def fibs_under(n):
         
 fibs_under(100)
 
-
-
-0
-0 + 1
-0 + 1 + 2
-0 + 1 + 2 + 3
-
-
-def generate_triangles():
-    a, b = 0, 1
-    while True:
-        a, b = a + b, b + 1
-        yield a
-        
-
-
-g = generate_triangles()
-
 for _ in range(5):
     print(next(g))
+    
 
 
 #############
@@ -1945,4 +1928,21 @@ make_table(key_justify='left', value_justify='right',
 
 
 
+# Linear algebra with funcitonal programming
 
+
+import itertools
+import operator
+
+u = [1, 2, 3]
+v = [3, 4, 5]
+
+def dot_product(u, v):
+    assert len(u) == len(v)
+    sum(itertools.starmap(operator.mul, zip(u, v)))
+
+def transpose(m):
+    return tuple(zip(*m))
+
+def lazy_transpose(m):
+    return zip(*m)
