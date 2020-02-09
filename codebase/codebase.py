@@ -537,7 +537,6 @@ Memory and speed considerations
 
 """
 
-
 # Procedural programming - "program flow"
 def get_odds(arr):
     return_list = []
@@ -607,12 +606,13 @@ def starts_with_m(arr):
     return list(filter(lambda elem: elem.lower().startswith('f'), arr))
        
 
+    
 ############
 # Iterators
 ############
 
 """
-Finite or infinite streams of data that can be looped over and read into 
+Finite or infinite streams of data delivered one value at a time that can be looped over and read into 
 data structures (if they are finite).
 """
 
@@ -630,8 +630,26 @@ print(toTen)
 print(next(toTen))
 for n in range(10):
     print(n)
+
+
+# Itertool module
+
+import itertools
+import operator
+
+list(itertools.combinations(['a', 'b', 'c'], 2))
+list(itertools.permutations(['a', 'b', 'c'], 2))
+
+for el in itertools.permutations('abc', 2):
+    print(el, end=', ')
     
+for el in itertools.repeat('Lololo', 5):
+    print(el, end='')
     
+print(list(itertools.starmap(operator.mul, itertools.zip_longest([3, 5, 7], [2, 3], fillvalue=1))))
+
+
+
 #############
 # Generators
 #############
@@ -669,6 +687,27 @@ def fibs_under(n):
         print(num)
         
 fibs_under(100)
+
+
+
+0
+0 + 1
+0 + 1 + 2
+0 + 1 + 2 + 3
+
+
+def generate_triangles():
+    a, b = 0, 1
+    while True:
+        a, b = a + b, b + 1
+        yield a
+        
+
+
+g = generate_triangles()
+
+for _ in range(5):
+    print(next(g))
 
 
 #############
