@@ -512,7 +512,167 @@ def my_func():
     """
 print(my_func.__doc__)
 
-        
+
+########################
+# First-class functions
+########################
+
+"""
+First-Class functions:
+"A programming language is said to have first class functions if it treats functions as first-class citizens."
+
+First-Class Citizen (Programming):
+"A first-class citizen (sometimes calles first-class object) is an entity which supports all the operations generally available to other entities, such as being being passes as an argument, returned from a function, and assitned to a variable."
+"""
+
+# Assign functions to variables
+
+def square(x):
+    return x * x
+
+f = square(5)  # Assign function output to variable
+f = square     # Assign function to variable (no (), as this triggers execution)
+
+print(square)
+print(f)       # f now also points to function square
+f(5)
+
+
+# Use functions as arguments in functions
+
+map(lambda x: x**2, [1, 2, 3])
+filter(lambda x: x % 2 == 0, [1, 2, 3])
+
+def do_twice(fn, *args):
+    fn(*args)
+    fn(*args)
+    
+do_twice(print, 'Hello world!')
+
+
+# Return functions from functions
+
+def make_divisibility_test(n):
+    def is_divisible_by(m):
+        return m % n == 0
+    return is_divisible_by
+
+test = make_divisibility_test(5)
+print(test.__name__)
+test(10)
+test(11)
+
+## What just happened? 
+# When executing the make function, we "parametrise" the
+# is_divisible function with 5, and then assign the function to the test
+# variable. The test variable now points to the is_divisible_by function 
+# and thus behaves just like it (this is because we return is_divisible_by 
+# when executing the make function). This can be seen from the print statement.
+# Hence, we can now execute test with the parameter of is_divisible_by, m. 
+
+## Another example
+
+def html_tag(tag):
+    
+    def wrap_text(msg):
+        print('<{0}>{1}</{0}>'.format(tag, msg))
+    
+    return wrap_text
+
+paragraph = html_tag('p')
+paragraph('This is a paragraph')
+
+
+###########
+# Closures
+###########
+
+"""
+A closure is an inner function that remembers and has access to variables in the local scope in which it was created, even after the outer function has finished executing.
+
+'A closure closes over the free variables from the environment in which they were creates'.
+
+Below, the 'free variable' is message.
+"""
+
+def outer(msg):
+    message = msg
+    
+    def inner():
+        print(message)
+    
+    return inner
+
+say_hi = outer('hi')
+print(say_hi.__name__)
+say_hi()                # inner has access to msg outside outer scope.
+
+say_hello = outer('Hello')
+say_hello()
+
+
+#############
+# Decorators
+#############
+
+"""
+A special type of function which takes as an argument a function and returns a new function which, usually, wraps some of the behaviour of the supplied function.
+"""
+
+# Decorators take in a function, modity it, and return the modified version
+
+def debug(function):
+    def modified_function(*args, **kwargs):
+        print('Arguments:', args, kwargs)
+        return function(*args, **kwargs)
+    return modified_function
+
+def foo(a, b, c=1):
+    return (a + b) * c
+
+foo = debug(foo)
+
+foo(2, 3)
+foo(2, 3, c=5)
+
+# This is already pretty cool. But, above, we overwrote the namespace 
+# binding of foo in the global scope, which is not cool. 
+# There is a better way:
+
+@debug
+def foo(a, b, c=1):
+    return (a + b) * c
+
+foo(2, 3)
+foo(2, 3, c=5)
+
+
+# Another simple example
+
+def decorator(original_fn):
+    def wrapper():
+        print('Wrapper executed this before {}'.format(original_fn.__name__))
+        return original_fn()
+    return wrapper
+
+def display():
+    print('Hello world')
+    
+decorated_display = decorator(display)
+print(decorated_display.__name__)
+decorated_display()
+
+## Use Python syntactic sugar option
+@decorator                              # Same as display = decorater(display)
+def display():
+    print('Hello world')
+
+display()
+
+
+
+
+
 
 #########################
 # Functional programming
@@ -691,63 +851,6 @@ fibs_under(100)
 for _ in range(5):
     print(next(g))
     
-
-
-#############
-# Decorators
-#############
-
-# We can use functions as arguments in functions
-
-map(lambda x: x**2, [1, 2, 3])
-filter(lambda x: x % 2 == 0, [1, 2, 3])
-
-def do_twice(fn, *args):
-    fn(*args)
-    fn(*args)
-    
-do_twice(print, 'Hello world!')
-
-
-# We can also return functions from functions
-
-def make_divisibility_test(n):
-    def is_divisible_by(m):
-        return m % n == 0
-    return is_divisible_by
-
-test = make_divisibility_test(5)
-test(10)
-test(11)
-
-
-# Decorators take in a function, modity it, and return the modified version
-
-def debug(function):
-    def modified_function(*args, **kwargs):
-        print('Arguments:', args, kwargs)
-        return function(*args, **kwargs)
-    return modified_function
-
-def foo(a, b, c=1):
-    return (a + b) * c
-
-foo = debug(foo)
-
-foo(2, 3)
-foo(2, 3, c=5)
-
-# This is already pretty cool. But, above, we overwrote the namespace 
-# binding of foo in the global scope, which is not cool. 
-# There is a better way:
-
-@debug
-def foo(a, b, c=1):
-    return (a + b) * c
-
-foo(2, 3)
-foo(2, 3, c=5)
-
 
 
 ###########
@@ -1946,3 +2049,109 @@ def transpose(m):
 
 def lazy_transpose(m):
     return zip(*m)
+
+
+# Create a timeit decorater function
+
+def timeit(fn):
+    """Decorater that prints out the duration the function took to execute. 
+    
+    Arguments:
+        fn (function) -- The function to time.
+    """
+    
+    def modified_fn(*args, **kwargs):
+        before = time.time()
+        out = fn(*args, **kwargs)
+        after = time.time()
+        
+        delta = (after - before) * 1000
+        print('Function duration: {} ms'.format(delta))
+        
+        return out
+        
+    return modified_fn
+
+@timeit
+def slow_fibbi(n):
+    """Use recursion to compute the nth Fibbonacci number slowly.
+    
+    Arguments:
+        n (int) -- The index of the Fibonacci number to compute.
+    """
+    fib = lambda n: fib(n-1) + fib(n-2) if n >= 2 else 1
+    return fib(n)
+
+@timeit    
+def fast_fibbi(n):
+    """Use a while loop to compute the nth Fibonacci number quickly.
+    
+    Arguments:
+        n (int) -- The index of the Fibonacci numbter to compute.
+    """
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a + b
+    return a
+
+slow_fibbi(30)
+fast_fibbi(30)
+
+
+# Create a timeit decorater function with iterations
+
+def timeit_iter(num_iterations=1):
+    """Decorater that prints out the duration the function took to execute. 
+    
+    Arguments:
+        num_iterations (int) -- The number of times to run the functions.
+    """
+    def wrapper(fn):    
+        def modified_fn(*args, **kwargs):
+            before = time.time()
+
+            for _ in range(num_iterations):
+                out = fn(*args, **kwargs)
+
+            after = time.time()
+
+            delta = (after - before) * 1000 / num_iterations
+
+            print('Average function duration: {} ms for {} iterations'.format(delta, num_iterations))
+        
+            return out        
+        return modified_fn
+    return wrapper
+
+@timeit_iter(num_iterations=10)
+def fast_fibbi(n):
+    """Use a while loop to compute the nth Fibonacci number quickly.
+    
+    Arguments:
+        n (int) -- The index of the Fibonacci numbter to compute.
+    """
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a + b
+    return a
+
+fast_fibbi(30)
+
+
+# Decorator for caching
+
+def memorize(function):
+    cache = {}
+    def memorize_fn(*args):
+        if args not in cache:
+            cache[args] = function(*args)
+        return cache[args]
+    return memorize_fn
+
+@memorize
+def fib(n):
+    return fib(n-1) + fib(n-2) if n > 2 else 1
+
+fib(30)
+fib(40)
+fib(100)

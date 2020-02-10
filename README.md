@@ -48,6 +48,7 @@ Python basics and writing Pythonic code (w1 and w2)
 - Jeff Knupp's idiomatic python
 - [CS41 idiomatic Python](https://drive.google.com/file/d/0B-eHIhYpHrGDNGZCYUN6SVB1OGc/view)
 - [Columbia data science style guide](http://columbia-applied-data-science.github.io/pages/lowclass-python-style-guide.html)
+- [CoreyMS videos](https://coreyms.com) - esp. [this](https://www.youtube.com/watch?time_continue=2&v=_P7X8tMplsw&feature=emb_logo)
 
 IPython (w3)
 - Switch to using Jupyter Lab 
@@ -67,9 +68,4 @@ Further topics:
 - Functional programming
 - Testing
 - And then causal analysis, stats, and machine learning. 
-
-
-CS basics
-[Stanford CS 101](http://web.stanford.edu/class/cs101/syllabus.html)
- 
 
