@@ -1,5 +1,28 @@
 #!/usr/bin/env python
 
+
+
+a = (x for x in range(100))
+
+next(a)
+
+2 in a
+
+next(a)
+
+def fib():
+    a, b = 0, 1
+    while True:
+        print(a)
+        a, b = b, a+b
+        
+list(fib() for _ in range(10))
+        
+
+
+
+
+
 ###############################################################################
 # Basics and best practices
 ###############################################################################
@@ -530,7 +553,7 @@ First-Class Citizen (Programming):
 def square(x):
     return x * x
 
-f = square(5)  # Assign function output to variable
+f = square(5)  # Assign function *output* to variable
 f = square     # Assign function to variable (no (), as this triggers execution)
 
 print(square)
@@ -592,7 +615,7 @@ A closure is an inner function that remembers and has access to variables in the
 
 'A closure closes over the free variables from the environment in which they were creates'.
 
-Below, the 'free variable' is message.
+A free variable is a variable defined inside the scope of the outer function that is not an argument in the inner function. Below, the 'free variable' is message.
 """
 
 def outer(msg):
@@ -611,43 +634,50 @@ say_hello = outer('Hello')
 say_hello()
 
 
+# Can make above more concise like so:
+
+def outer(msg):    
+    def inner():
+        print(msg)
+    return inner
+
+
 #############
 # Decorators
 #############
 
 """
 A special type of function which takes as an argument a function and returns a new function which, usually, wraps some of the behaviour of the supplied function.
+
+Comparison to closures above: 
+We created an inner function that, once executed, printed the message that was the argument of the outer function. Decorators work in the same way, but execute functions that were passed as arguments in the outer function.
 """
 
-# Decorators take in a function, modity it, and return the modified version
+def decorator(original_fn):
+    def wrapper():    
+        return original_fn()
+    return wrapper
 
-def debug(function):
-    def modified_function(*args, **kwargs):
-        print('Arguments:', args, kwargs)
-        return function(*args, **kwargs)
-    return modified_function
+def display():
+    print('Hello world')
 
-def foo(a, b, c=1):
-    return (a + b) * c
+decorated_display = decorator(display)
 
-foo = debug(foo)
+print(decorated_display.__name__)         # Decorated_display points to wrapper
+    
+decorated_display()
 
-foo(2, 3)
-foo(2, 3, c=5)
+## What just happened?
+## 1) We created a decorator function that takes in a function and returns a 
+##    wrapper function. The wrapper funciton is not being executed (i.e. has)
+##    no () at the end. Once it is executed, it simply returns the original
+##    function, as we can see from its definition.
+## 2) We then call the decorator with our simple display function as the
+##    argument and assign it to the variable decorated_display. decorated_display
+##    now points to wrapper, and is ready to be executed. Which we do in the 
+##    last step.
 
-# This is already pretty cool. But, above, we overwrote the namespace 
-# binding of foo in the global scope, which is not cool. 
-# There is a better way:
-
-@debug
-def foo(a, b, c=1):
-    return (a + b) * c
-
-foo(2, 3)
-foo(2, 3, c=5)
-
-
-# Another simple example
+# Adding additional functionality to wrapper
 
 def decorator(original_fn):
     def wrapper():
@@ -657,21 +687,155 @@ def decorator(original_fn):
 
 def display():
     print('Hello world')
-    
-decorated_display = decorator(display)
-print(decorated_display.__name__)
-decorated_display()
 
-## Use Python syntactic sugar option
-@decorator                              # Same as display = decorater(display)
+decorated = decorator(display)
+decorated()
+
+
+## This is already cool. But instead of binding the decorator call to a new 
+## variable decorated, we can wrap the decorater around the original function
+## directly using syntactic sugar like so:
+
+@decorator                        # Equivalent to display = decorator(display)
 def display():
     print('Hello world')
 
 display()
 
 
+# Decorator with args and kwargs
+
+def debug(function):
+    def modified_function(*args, **kwargs):
+        print('Arguments:', args, kwargs)
+        return function(*args, **kwargs)
+    return modified_function
+
+@debug
+def foo(a, b, c=1):
+    return (a + b) * c
+
+foo(2, 3)
+foo(2, 3, c=5)
 
 
+
+# Decorator for logging
+
+def my_logger(orig_fn):
+    import logging
+    logging.basicConfig(filename='{}.log'.format(orig_fn.__name__),
+                        level=logging.INFO)
+    
+    def wrapper(*args, **kwargs):
+        logging.info(
+            'Ran with args: {}, and kwargs {}'.format(args, kwargs))
+        return orig_fn(*args, **kwargs)
+    
+    return wrapper
+
+@my_logger
+def foo(a, b, c=1):
+    return (a + b) * c
+
+foo(1, 2, c=7)    # Creates foo.log with logged info
+
+
+# Decorator for timing
+
+def my_timer(orig_fn):
+    import time
+    
+    def wrapper(*args, **kwargs):
+        before = time.time()
+        result = orig_fn(*args, **kwargs)
+        after = time.time()
+        delta = (after - before) * 1000
+        print('{} ran in {} ms'.format(orig_fn.__name__, delta))       
+        return result
+    
+    return wrapper
+    
+import time
+
+@my_timer
+def foo(a, b, c=1):
+    time.sleep(1)
+    return (a + b) * c
+
+foo(1, 2, c=7)   
+
+
+# Chaining decorators
+
+## Try using decorators from above
+
+@my_timer
+@my_logger
+def foo(a, b, c=1):
+    time.sleep(1)
+    return (a + b) * c
+
+foo(4, 5)
+
+## Doesn't work, because above creates foo = my_timer(my_logger(foo)), which --
+## because my_logger returns 'wrapper' -- is equal to foo = my_timer(wrapper).
+## Need to wrap wrappers using functools wrapper like so:
+
+from functools import wraps
+
+def my_logger(orig_fn):
+    import logging
+    logging.basicConfig(filename='{}.log'.format(orig_fn.__name__),
+                        level=logging.INFO)
+    
+    @wraps(orig_fn)
+    def wrapper(*args, **kwargs):
+        logging.info(
+            'Ran with args: {}, and kwargs {}'.format(args, kwargs))
+        return orig_fn(*args, **kwargs)
+    
+    return wrapper
+
+
+def my_timer(orig_fn):
+    import time
+    
+    @wraps(orig_fn)
+    def wrapper(*args, **kwargs):
+        before = time.time()
+        result = orig_fn(*args, **kwargs)
+        after = time.time()
+        delta = (after - before) * 1000
+        print('{} ran in {} ms'.format(orig_fn.__name__, delta))       
+        return result
+    
+    return wrapper
+    
+@my_timer
+@my_logger
+def foo(a, b, c=1):
+    return (a + b) * c
+
+foo(4, 5)
+
+
+# Decorator for caching (still don't 100 percent understand this)
+
+def cache(fn):
+    fn._cache = {}
+    def wrapper(*args):
+        if args not in fn._cache:
+            fn._cache[args] = fn(*args)
+#         print(fn._cache, fn._cache[args])
+        return fn._cache[args]
+    return wrapper
+
+@cache
+def fib(n):
+    return  fib(n-1) + fib(n-2) if n > 2 else 1
+
+fib(5)
 
 
 #########################
@@ -786,8 +950,8 @@ for name in long_names:
 # Creating an iterator object
 
 toTen = (n for n in range(11))
-print(toTen)
-print(next(toTen))
+toTen
+next(toTen)
 for n in range(10):
     print(n)
 
@@ -838,6 +1002,10 @@ def fib():                    # ... and as a generator
 g = fib()  # Namespace created, fib() pushed to stack
 next(g)
 
+for _ in range(5):
+    print(next(g))
+
+    
 # Lazy generation -- generate Fibonacci sequence on demand
 
 def fibs_under(n):
@@ -848,9 +1016,71 @@ def fibs_under(n):
         
 fibs_under(100)
 
-for _ in range(5):
-    print(next(g))
+
+##########
+# Classes
+##########
+
+"""
+Why use classes?
+-----------------
+They allow us to logically group our data and functions in a way that's eary to reuse and easy to build upon.
+
+By data and functions we mean attributes and methods; so an attribute is data associated with a specific class, a method is a function associated with a specific class.
+
+Class vs instance of a class:
+------------------------------
+A class is a blueprint to create instances of that class. In the example below, Employee is the class, each employee is an instance of the class.
+
+Source:
+-------
+https://www.youtube.com/watch?v=ZDa-Z5JzLYM&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=41&t=0s
+"""
+
+# Create a simple class
+
+class Employee:
+
+    # Class variables
+    raise_amount = 1.04
+    num_employees = 0
+
+    # Instance variables
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + '.' + last + '@company.com'
+        
+        # Increment num_employees each time instance is created
+        Employee.num_employees += 1
+        
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
     
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amount)
+
+    
+# Create an instance of the Employee class
+emp_1 = Employee('Fabian', 'Gunzinger', 50000)
+emp_2 = Employee('Molly', 'Janz', 60000)
+
+# Print attribute and method output for the instance
+emp_2.email
+
+emp_1.fullname()           # This automatically gets transformed into below
+Employee.fullname(emp_1)
+
+emp_1.apply_raise()
+emp_1.pay
+
+emp_1.num_employees
+
+emp_1.__dict__
+Employee.__dict__
+
+
 
 
 ###########
@@ -2138,20 +2368,4 @@ def fast_fibbi(n):
 fast_fibbi(30)
 
 
-# Decorator for caching
 
-def memorize(function):
-    cache = {}
-    def memorize_fn(*args):
-        if args not in cache:
-            cache[args] = function(*args)
-        return cache[args]
-    return memorize_fn
-
-@memorize
-def fib(n):
-    return fib(n-1) + fib(n-2) if n > 2 else 1
-
-fib(30)
-fib(40)
-fib(100)
