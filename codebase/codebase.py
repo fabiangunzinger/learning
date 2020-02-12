@@ -1,28 +1,6 @@
 #!/usr/bin/env python
 
 
-
-a = (x for x in range(100))
-
-next(a)
-
-2 in a
-
-next(a)
-
-def fib():
-    a, b = 0, 1
-    while True:
-        print(a)
-        a, b = b, a+b
-        
-list(fib() for _ in range(10))
-        
-
-
-
-
-
 ###############################################################################
 # Basics and best practices
 ###############################################################################
@@ -59,6 +37,46 @@ files = [
 
 """
 
+########
+# Misc.
+########
+
+# (is vs. ==) is checks if two variables refer to the same object, but == checks
+# if the objects pointed to have the same values (from: https://learnxinyminutes.com/docs/python3/)
+a = [1, 2, 3, 4]  # Point a at a new list, [1, 2, 3, 4]
+b = a             # Point b at what a is pointing to
+b is a            # => True, a and b refer to the same object
+b == a            # => True, a's and b's objects are equal
+b = [1, 2, 3, 4]  # Point b at a new list, [1, 2, 3, 4]
+b is a            # => False, a and b do not refer to the same object
+b == a            # => True, a's and b's objects are equal
+
+# Python has a print function
+print("I'm Python. Nice to meet you!")  # => I'm Python. Nice to meet you!
+
+# By default the print function also prints out a newline at the end.
+# Use the optional argument end to change the end string.
+print("Hello, World", end="!")  # => Hello, World!
+
+# if can be used as an expression
+"yahoo!" if 3 > 2 else 2  # => "yahoo!"
+
+# Shallow copy, copy, deepcopy
+# See here: https://stackoverflow.com/questions/
+# 2612802/how-to-clone-or-copy-a-list)
+
+import copy
+a = [1, 2, 3]
+b = a                 # Shallow copy 
+c = a.copy()          # Copy
+d = a[:]              # Copy
+e = list(a)           # Copy
+f = copy.copy(a)      # Copy
+k = copy.deepcopy(a)  # Deep copy (preserves class instance values in list)
+
+b is a
+c is a
+k is a
 
 
 #######################################
@@ -92,16 +110,10 @@ compute(1, 2, 3)
 compute([1], [2, 3], 4)
 compute('lo', 'la', 3)
 
-# is vs. ==
-1 == 1.0  # => True   (use to compare values)
-1 is 1.0  # => False  (is checks for identity, not value)
-
-
 
 ##################
 # Data structures
 ##################
-
 
 # Integers and floats
 
@@ -113,7 +125,8 @@ compute('lo', 'la', 3)
 
 # String
 
-word = 'Just some word'
+'A string literal'
+word = 'Just some word'   # word is a variable that points to a string
 word[::-1].lower()
 word.find('so')           # => 5
 word.startswith('Wo')     # => False
@@ -134,6 +147,9 @@ word.split()
 '{:*^12}'.format('Hello')
 '{:->12}'.format('Fab')
 
+name = 'Fabian'
+f'{name} is {len(name)} characters long' # Formatted strings - f-strints
+
 # Boolean
 
 # Array
@@ -153,7 +169,7 @@ a.extend([3, 4])  # => [1, 2, 3, 4]   (append all elements of iterator)
 
 a = [1, 2, 3]
 del a[2]     # Remove element from list by index
-a.remove(1)  # Remove elemetn from list by value
+a.remove(1)  # Remove element from list by value (first ocurrance)
 a.pop(1)     # => 2 (remove element by index and return)
 
 
@@ -165,7 +181,20 @@ a = 'Hello'
 b = 'World'
 c = a, b
 type(c)  # => tuple
+
+# You can also do extended unpacking
+a, *b, c = (1, 2, 3, 4)  # a is now 1, b is now [2, 3] and c is now 4
+
+# Tuples are created by default if you leave out the parentheses
+d, e, f = 4, 5, 6  # tuple 4, 5, 6 is unpacked into variables d, e and f
+
 b, a = c  # Swapping values (can also do directly: b, a = a, b)
+
+type((1))   # => int
+type(())    # => tuple
+type((1,))  # => tuple
+
+
 
 def fibonacci(n):
     """Print out the first n Fibonacci numbers"""
@@ -1082,6 +1111,31 @@ Employee.__dict__
 
 
 
+########
+# Numpy
+########
+
+import numpy as np
+
+
+"""
+numpy array axes: rows (axis 0), columns (axis 1), depth (axis 2)
+
+Example for axis 2: when data is images, axes 0 and 1 would be pixels, axes 2 would be red, green, blue tuple - i.e. exis 2 would be of dimension 3.
+"""
+
+# Build ndarray from iterator
+
+np.array((x*x for x in range(5)))    # Doesn't work
+np.fromiter((x*x for x in range(5)), int)
+
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+arr
+np.sum(arr, axis=0)  # Sum along rows - sums vertically (down along rows)  
+np.sum(arr, axis=1)  # Sum along axis - sums horizontally (across along columns)
+
+
+
 
 ###########
 # File I/O
@@ -1191,25 +1245,25 @@ json_data = r.json()
 for key, value in json_data.items():
 	print(key + ":", value)
 
-
-
-
-# Iterables
+    
+    
+# zip
 
 letters = ['a', 'b', 'c']
 numbers = [1, 2, 3]
 
-for e in enumerate(letters, start=10):
-	print(e)
+[(l, n) for l, n in zip(letters, numbers)]
 
 for l, n in zip(letters, numbers):
 	print(l, n)
 
 print(*zip(letters, numbers))
 
+print(*range(5))
+
 z = zip(letters, numbers)
 letters, numbers = zip(*z)
-print(letters)
+print(letters, numbers)
 
 
 
@@ -2368,4 +2422,11 @@ def fast_fibbi(n):
 fast_fibbi(30)
 
 
+####################
+# Acknowledgements
+####################
 
+"""
+https://stanfordpython.com
+https://learnxinyminutes.com/docs/python3/
+"""
