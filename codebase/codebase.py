@@ -37,9 +37,29 @@ files = [
 
 """
 
-########
-# Misc.
-########
+# EAFP > LBYL
+
+# EAFP (“it’s easier to ask for forgiveness than permission”) means that you should just do what you expect to work and if an exception might be thrown from the operation then catch it and deal with that fact. What people are traditionally used to is LBYL: “look before you leap”, where you first check whether something will succeed and only proceed if you know it will work.
+
+def dont(m, n):
+    if n == 0:
+        print("Can't divide by 0")
+        return None
+    return m / n
+
+def do(m, n):
+    try:
+        return m / n 
+    except ZeroDivisionError:
+        print("Can't divide by 0")
+        return None
+    
+
+
+
+###########################################################
+## Misc.
+###########################################################
 
 # (is vs. ==) is checks if two variables refer to the same object, but == checks
 # if the objects pointed to have the same values (from: https://learnxinyminutes.com/docs/python3/)
@@ -77,6 +97,59 @@ k = copy.deepcopy(a)  # Deep copy (preserves class instance values in list)
 b is a
 c is a
 k is a
+
+
+# Line continuation 
+
+my_very_big_string = (  # Split string
+    "For a long time I used to go to bed early. Sometimes, "
+    "when I had put out my candle, my eyes would close so quickly "
+    "that I had not even time to say “I’m going to sleep.”"
+)
+
+from some.deep.module.inside.a.module import (  # Use parentheses
+    a_nice_function, another_nice_function, yet_another_nice_function)
+
+# Need to break lines often a sign that you're trying to do too much at once, 
+# refactor code if possible!
+
+
+
+#############################################################
+## Modules (from https://learnxinyminutes.com/docs/python3/)
+#############################################################
+
+# You can import modules
+import math
+print(math.sqrt(16))  # => 4.0
+
+# You can get specific functions from a module
+from math import ceil, floor
+print(ceil(3.7))   # => 4.0
+print(floor(3.7))  # => 3.0
+
+# You can import all functions from a module.
+# Warning: this is not recommended
+from math import *
+
+# You can shorten module names
+import math as m
+math.sqrt(16) == m.sqrt(16)  # => True
+
+# Python modules are just ordinary Python files. You
+# can write your own, and import them. The name of the
+# module is the same as the name of the file.
+
+# You can find out which functions and attributes
+# are defined in a module.
+import math
+dir(math)
+
+# If you have a Python script named math.py in the same
+# folder as your current script, the file math.py will
+# be loaded instead of the built-in Python module.
+# This happens because the local folder has priority
+# over Python's built-in libraries.
 
 
 #######################################
@@ -183,7 +256,12 @@ c = a, b
 type(c)  # => tuple
 
 # You can also do extended unpacking
-a, *b, c = (1, 2, 3, 4)  # a is now 1, b is now [2, 3] and c is now 4
+
+*start, a = [1, 2, 3]
+a, *middle, c = [1, 2, 3, 4]
+a, *rest = [1, 2, 3]
+a, _, c = [1, 2, 3]           # Create an ignored variable unneeded stuff
+
 
 # Tuples are created by default if you leave out the parentheses
 d, e, f = 4, 5, 6  # tuple 4, 5, 6 is unpacked into variables d, e and f
@@ -214,9 +292,9 @@ a = {'cs': [41, 106], 'econ': [101, 1003]}
 b = dict(cs=[41, 106], econ=[101, 1003])
 a == b
 
-cs = a.get('cs')
-math = a.get('math', [])
-num_math = len(math)
+print(a.get('cs'))
+print(a.get('cs', []))    # Use default value for keys not in dict
+print(a.get('math', []))  # Returns default value
 
 b.pop('cs')
 b.pop('math', None)
@@ -233,7 +311,8 @@ for key in a:
     print(key, a[key])
 
 keylist = list(a.keys())
-    
+
+
 
 # Set and frozenset
 # Is an unordered, finite collection of distinct, hashable elements.
@@ -391,10 +470,9 @@ while n < 10000:
 
 
 
-############
-# Functions
-############
-
+###########################################################
+## Functions
+###########################################################
 
 """ Aside: parameter passing paradigms
 
@@ -410,43 +488,40 @@ def reassign(list):
 def append(list):
     list.append(1)
 
-
 Pass-by-reference: 
 ------------------
 The variable, rather than its content, is passed to the function (and content implicitly comes withi it).
 
-list = [0]
-reassign(list)
-list  # => [0, 1]
+mylist = [0]
+reassign(mylist)
+mylist  # => [0, 1]
 
-list = [0]
-append(list)
-list  # => [0, 1]
-
+mylist = [0]
+append(mylist)
+mylist  # => [0, 1]
 
 Pass-by-value:
 ---------------
-The object, rather than the variable, is passed to the function (precisely: the function receives a copy of the objects, which are stored separately in memory, and effectively creates its own box to put them into). Hence, outside the function, nothing happens to the original object.
+The object, rather than the variable, is passed to the function (precisely: the function receives a copy of the objects, which are stored separately in memory, and effectively creates its own box, or variable, to put them into). Hence, outside the function, nothing happens to the original object.
 
-list = [0]
-reassign(list)
-list  # => [0]
+mylist = [0]
+reassign(mylist)
+mylist  # => [0]
 
-list = [0]
-append(list)
-list  # => [0]
-
+mylist = [0]
+append(mylist)
+mylist  # => [0]
 
 Python: pass-by-object-reference:
 ----------------------------------
 
-list = [0]
-reassign(list)
-list  # => [0]
+mylist = [0]
+reassign(mylist)
+mylist  # => [0]
 
-list = [0]
-append(list)
-list  # => [0, 1]
+mylist = [0]
+append(mylist)
+mylist  # => [0, 1]
 
 """
 
@@ -493,6 +568,8 @@ ask_yn('Ok to overwrite?')
 
 echoLambda = (lambda word, n: word * n)
 echoLambda(5, 'Fab')
+
+(lambda word, n: word * n)('Mo', 5)
 
 letters = ['a', 'b', 'c']
 shouts = list(map(lambda l: l + '!!!', letters))
@@ -555,14 +632,56 @@ stylize_quote('Doth mother know you weareth her drapes?', **info)
 )
 
 
+# More unpacking
+
+def all_the_args(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+args = (1, 2, 3, 4)
+kwargs = {"a": 3, "b": 4}
+
+all_the_args(*args)            # equivalent to all_the_args(1, 2, 3, 4)
+all_the_args(**kwargs)         # equivalent to all_the_args(a=3, b=4)
+all_the_args(*args, **kwargs)
+
+
 # Function best practices
 
 def my_func():
-    """Write a one-line summary here
+    """Write a one-line summary here.
     
     And a more elaborate description from here onwards.
     """
 print(my_func.__doc__)
+
+
+# Function scope
+
+x = 5
+
+def set_x(num):
+    # Local var x not the same as global variable x
+    x = num    # => 43
+    print(x)   # => 43
+
+def set_global_x(num):
+    global x
+    print(x)   # => 5
+    x = num    # global var x is now set to 6
+    print(x)   # => 6
+
+set_x(43)
+set_global_x(6)
+
+# A bad coding example to highlight the use of unpacking and local scope
+
+def make_complex(*args):
+    x, y = args
+    return dict(**locals())
+
+make_complex('a', 'b')
+
 
 
 ########################
@@ -574,7 +693,7 @@ First-Class functions:
 "A programming language is said to have first class functions if it treats functions as first-class citizens."
 
 First-Class Citizen (Programming):
-"A first-class citizen (sometimes calles first-class object) is an entity which supports all the operations generally available to other entities, such as being being passes as an argument, returned from a function, and assitned to a variable."
+"A first-class citizen (sometimes calles first-class object) is an entity which supports all the operations generally available to other entities, such as being being passes as an argument, returned from a function, and assigned to a variable."
 """
 
 # Assign functions to variables
@@ -586,7 +705,9 @@ f = square(5)  # Assign function *output* to variable
 f = square     # Assign function to variable (no (), as this triggers execution)
 
 print(square)
-print(f)       # f now also points to function square
+print(f)       # f points to same object as square
+print(f.__name__)
+
 f(5)
 
 
@@ -604,40 +725,40 @@ do_twice(print, 'Hello world!')
 
 # Return functions from functions
 
-def make_divisibility_test(n):
-    def is_divisible_by(m):
-        return m % n == 0
-    return is_divisible_by
+def create_adder(n):
+    def adder(m):
+        return n + m
+    return adder
 
-test = make_divisibility_test(5)
-print(test.__name__)
-test(10)
-test(11)
+add_5 = create_adder(5)
+print(add_5.__name__)
+add_5(10)
 
-## What just happened? 
-# When executing the make function, we "parametrise" the
-# is_divisible function with 5, and then assign the function to the test
-# variable. The test variable now points to the is_divisible_by function 
-# and thus behaves just like it (this is because we return is_divisible_by 
-# when executing the make function). This can be seen from the print statement.
-# Hence, we can now execute test with the parameter of is_divisible_by, m. 
+# What just happened?
+# When calling the create_adder function, we "parametrise" the
+# adder function with 10, and then assign it to the add_5 variable. 
+# Notice that create_adder returns 'adder', rather than 'adder()', so we
+# assign the function, rather than the function output to add_5. Also,
+# because the output of create_adder is the function adder, assigning 
+# add_5 to the output of create_adder(5) is the same as assigning it ot the
+# adder function 'parametrised' with 5. As seen above, when we assign a 
+# function to a variable, the variable then points to the same function object 
+# and thus behaves like the original function.
 
-## Another example
+# Another example
 
-def html_tag(tag):
-    
+def html_tag(tag):    
     def wrap_text(msg):
         print('<{0}>{1}</{0}>'.format(tag, msg))
-    
     return wrap_text
 
 paragraph = html_tag('p')
 paragraph('This is a paragraph')
 
 
-###########
-# Closures
-###########
+###########################################################
+## Closures
+###########################################################
 
 """
 A closure is an inner function that remembers and has access to variables in the local scope in which it was created, even after the outer function has finished executing.
@@ -671,9 +792,9 @@ def outer(msg):
     return inner
 
 
-#############
-# Decorators
-#############
+###########################################################
+## Decorators
+###########################################################
 
 """
 A special type of function which takes as an argument a function and returns a new function which, usually, wraps some of the behaviour of the supplied function.
@@ -1046,9 +1167,9 @@ def fibs_under(n):
 fibs_under(100)
 
 
-##########
-# Classes
-##########
+###########################################################
+## Classes
+###########################################################
 
 """
 Why use classes?
@@ -1110,7 +1231,6 @@ emp_1.__dict__
 Employee.__dict__
 
 
-
 ########
 # Numpy
 ########
@@ -1157,8 +1277,20 @@ text
 # Importing data
 
 # Text files
+
+f = open('file.txt')         # Don't do this
+a = f.read()
+print a
+f.close()
+Good:
+
+with open('file.txt') as f:  # Do this instead (closes f even if error is raised inside with block)
+    for line in f:
+        print line
+        
 with open('name_of_file.txt', mode='r') as file:
     print(file.read())
+
 with open('name_of_file.txt', mode='r') as file:
     print(file.readline())
 
