@@ -20,7 +20,7 @@ Online checker: http://pep8online.com
 
 Math operators
 ---------------
-2*3 - 1 
+2*3 - 1
 
 x*x + y*y
 
@@ -49,11 +49,11 @@ def dont(m, n):
 
 def do(m, n):
     try:
-        return m / n 
+        return m / n
     except ZeroDivisionError:
         print("Can't divide by 0")
         return None
-    
+
 
 
 
@@ -87,7 +87,7 @@ print("Hello, World", end="!")  # => Hello, World!
 
 import copy
 a = [1, 2, 3]
-b = a                 # Shallow copy 
+b = a                 # Shallow copy
 c = a.copy()          # Copy
 d = a[:]              # Copy
 e = list(a)           # Copy
@@ -99,7 +99,7 @@ c is a
 k is a
 
 
-# Line continuation 
+# Line continuation
 
 my_very_big_string = (  # Split string
     "For a long time I used to go to bed early. Sometimes, "
@@ -110,7 +110,7 @@ my_very_big_string = (  # Split string
 from some.deep.module.inside.a.module import (  # Use parentheses
     a_nice_function, another_nice_function, yet_another_nice_function)
 
-# Need to break lines often a sign that you're trying to do too much at once, 
+# Need to break lines often a sign that you're trying to do too much at once,
 # refactor code if possible!
 
 
@@ -189,7 +189,6 @@ compute('lo', 'la', 3)
 ##################
 
 # Integers and floats
-
 5
 5.0      # =>      (float)
 5 / 2    # => 2.5  (division)
@@ -197,7 +196,6 @@ compute('lo', 'la', 3)
 5 % 2    # => 1    (modulo operator)
 
 # String
-
 'A string literal'
 word = 'Just some word'   # word is a variable that points to a string
 word[::-1].lower()
@@ -280,12 +278,13 @@ def fibonacci(n):
     for i in range(n):
         print(a)
         a, b = b, a + b
+
 fibonacci(4)
 
 for i, name in enumerate(['Fabian', 'Molly']):
     print(i, name)
 
-    
+
 # Dictionary
 
 a = {'cs': [41, 106], 'econ': [101, 1003]}
@@ -301,7 +300,7 @@ b.pop('math', None)
 del b['econ']
 
 a.keys()    # => <['cs', 'econ']>
-a.values()  # => <[[41, 106], [101], [1003]] 
+a.values()  # => <[[41, 106], [101], [1003]]
 a.items()   # => <[('cs', [41, 106]), ('econ', ['101', '1003'])]
 
 for key, value in a.items():
@@ -311,8 +310,6 @@ for key in a:
     print(key, a[key])
 
 keylist = list(a.keys())
-
-
 
 # Set and frozenset
 # Is an unordered, finite collection of distinct, hashable elements.
@@ -337,15 +334,21 @@ a >= b  # Superset or equal to
 
 efficient_letters = 'aklmeficntzy'
 
+
 def is_efficient(word):
     for letter in word:
         if letter not in efficient_letters:
             return False
     return True
+
+
 is_efficient('efficient')
+
 
 def is_efficient(word):
     return set(word) <= set(efficient_letters)
+
+
 is_efficient('efficient')
 
 
@@ -358,7 +361,7 @@ is_efficient('efficient')
 ###############
 
 
-# Zero values and empty data structures are 'falsy', everything 
+# Zero values and empty data structures are 'falsy', everything
 # else is 'truthy'
 bool(False)    # => False
 bool([])       # => False
@@ -388,7 +391,7 @@ except (OneError, OtherError):
     handle_multiple_errors()
 
 
-# Use errors to handle control flow (use below instead of checking 
+# Use errors to handle control flow (use below instead of checking
 # that file exists)
 import os
 try:
@@ -398,14 +401,14 @@ except FileNotFoundError:
 
 
 
-########    
+########
 # Loops
 ########
 
 
 for item in iterable:
     process(item)
-    
+
 for n in range(1, 5):
     if n == 3:
         break           # Interrupts loop
@@ -427,14 +430,14 @@ for f in sorted(set(basket)):
 
 while condition:
     do_stuff()
-    
+
 n = 2
 while n < 10000:
     print(n)
     n **= 2
-    
 
-    
+
+
 #################
 # Comprehensions
 #################
@@ -488,7 +491,7 @@ def reassign(list):
 def append(list):
     list.append(1)
 
-Pass-by-reference: 
+Pass-by-reference:
 ------------------
 The variable, rather than its content, is passed to the function (and content implicitly comes withi it).
 
@@ -553,12 +556,12 @@ def ask_yn(prompt,
            complaint='Enter Y of N!'):
     for i in range(retries):
         ans = input(prompt)
-        
+
         if ans in 'yY':
             return True
         if ans in 'nN':
             return False
-        
+
         print(complaint)
 
 ask_yn('Ok to overwrite?')
@@ -595,7 +598,7 @@ def is_prime(n):
     return True
 
 primes = [p for p in range(1, 100) if is_prime(p)]
-scaled_sum(*primes)  # '*' unpacks iterables inside function 
+scaled_sum(*primes)  # '*' unpacks iterables inside function
 
 
 # Variadic keyword arguments
@@ -603,7 +606,7 @@ scaled_sum(*primes)  # '*' unpacks iterables inside function
 def stylize_quote(quote, **speaker_info):
     print('> {}'.format(quote))
     print('-' * (len(quote) + 2))
-    
+
     for k, v in speaker_info.items():
         print('{}: {}'.format(k, v))
 
@@ -650,7 +653,7 @@ all_the_args(*args, **kwargs)
 
 def my_func():
     """Write a one-line summary here.
-    
+
     And a more elaborate description from here onwards.
     """
 print(my_func.__doc__)
@@ -719,7 +722,7 @@ filter(lambda x: x % 2 == 0, [1, 2, 3])
 def do_twice(fn, *args):
     fn(*args)
     fn(*args)
-    
+
 do_twice(print, 'Hello world!')
 
 
@@ -736,18 +739,18 @@ add_5(10)
 
 # What just happened?
 # When calling the create_adder function, we "parametrise" the
-# adder function with 10, and then assign it to the add_5 variable. 
+# adder function with 10, and then assign it to the add_5 variable.
 # Notice that create_adder returns 'adder', rather than 'adder()', so we
 # assign the function, rather than the function output to add_5. Also,
-# because the output of create_adder is the function adder, assigning 
+# because the output of create_adder is the function adder, assigning
 # add_5 to the output of create_adder(5) is the same as assigning it ot the
-# adder function 'parametrised' with 5. As seen above, when we assign a 
-# function to a variable, the variable then points to the same function object 
+# adder function 'parametrised' with 5. As seen above, when we assign a
+# function to a variable, the variable then points to the same function object
 # and thus behaves like the original function.
 
 # Another example
 
-def html_tag(tag):    
+def html_tag(tag):
     def wrap_text(msg):
         print('<{0}>{1}</{0}>'.format(tag, msg))
     return wrap_text
@@ -770,10 +773,10 @@ A free variable is a variable defined inside the scope of the outer function tha
 
 def outer(msg):
     message = msg
-    
+
     def inner():
         print(message)
-    
+
     return inner
 
 say_hi = outer('hi')
@@ -786,7 +789,7 @@ say_hello()
 
 # Can make above more concise like so:
 
-def outer(msg):    
+def outer(msg):
     def inner():
         print(msg)
     return inner
@@ -799,12 +802,12 @@ def outer(msg):
 """
 A special type of function which takes as an argument a function and returns a new function which, usually, wraps some of the behaviour of the supplied function.
 
-Comparison to closures above: 
+Comparison to closures above:
 We created an inner function that, once executed, printed the message that was the argument of the outer function. Decorators work in the same way, but execute functions that were passed as arguments in the outer function.
 """
 
 def decorator(original_fn):
-    def wrapper():    
+    def wrapper():
         return original_fn()
     return wrapper
 
@@ -814,17 +817,17 @@ def display():
 decorated_display = decorator(display)
 
 print(decorated_display.__name__)         # Decorated_display points to wrapper
-    
+
 decorated_display()
 
 ## What just happened?
-## 1) We created a decorator function that takes in a function and returns a 
+## 1) We created a decorator function that takes in a function and returns a
 ##    wrapper function. The wrapper funciton is not being executed (i.e. has)
 ##    no () at the end. Once it is executed, it simply returns the original
 ##    function, as we can see from its definition.
 ## 2) We then call the decorator with our simple display function as the
 ##    argument and assign it to the variable decorated_display. decorated_display
-##    now points to wrapper, and is ready to be executed. Which we do in the 
+##    now points to wrapper, and is ready to be executed. Which we do in the
 ##    last step.
 
 # Adding additional functionality to wrapper
@@ -842,7 +845,7 @@ decorated = decorator(display)
 decorated()
 
 
-## This is already cool. But instead of binding the decorator call to a new 
+## This is already cool. But instead of binding the decorator call to a new
 ## variable decorated, we can wrap the decorater around the original function
 ## directly using syntactic sugar like so:
 
@@ -876,12 +879,12 @@ def my_logger(orig_fn):
     import logging
     logging.basicConfig(filename='{}.log'.format(orig_fn.__name__),
                         level=logging.INFO)
-    
+
     def wrapper(*args, **kwargs):
         logging.info(
             'Ran with args: {}, and kwargs {}'.format(args, kwargs))
         return orig_fn(*args, **kwargs)
-    
+
     return wrapper
 
 @my_logger
@@ -895,17 +898,17 @@ foo(1, 2, c=7)    # Creates foo.log with logged info
 
 def my_timer(orig_fn):
     import time
-    
+
     def wrapper(*args, **kwargs):
         before = time.time()
         result = orig_fn(*args, **kwargs)
         after = time.time()
         delta = (after - before) * 1000
-        print('{} ran in {} ms'.format(orig_fn.__name__, delta))       
+        print('{} ran in {} ms'.format(orig_fn.__name__, delta))
         return result
-    
+
     return wrapper
-    
+
 import time
 
 @my_timer
@@ -913,7 +916,7 @@ def foo(a, b, c=1):
     time.sleep(1)
     return (a + b) * c
 
-foo(1, 2, c=7)   
+foo(1, 2, c=7)
 
 
 # Chaining decorators
@@ -938,30 +941,30 @@ def my_logger(orig_fn):
     import logging
     logging.basicConfig(filename='{}.log'.format(orig_fn.__name__),
                         level=logging.INFO)
-    
+
     @wraps(orig_fn)
     def wrapper(*args, **kwargs):
         logging.info(
             'Ran with args: {}, and kwargs {}'.format(args, kwargs))
         return orig_fn(*args, **kwargs)
-    
+
     return wrapper
 
 
 def my_timer(orig_fn):
     import time
-    
+
     @wraps(orig_fn)
     def wrapper(*args, **kwargs):
         before = time.time()
         result = orig_fn(*args, **kwargs)
         after = time.time()
         delta = (after - before) * 1000
-        print('{} ran in {} ms'.format(orig_fn.__name__, delta))       
+        print('{} ran in {} ms'.format(orig_fn.__name__, delta))
         return result
-    
+
     return wrapper
-    
+
 @my_timer
 @my_logger
 def foo(a, b, c=1):
@@ -994,7 +997,7 @@ fib(5)
 
 """
 
-A programming paradigm built on the idea of composing programs of functions, 
+A programming paradigm built on the idea of composing programs of functions,
 rather than sequential steps of execution.
 
 Advantages of functional programming
@@ -1043,7 +1046,7 @@ sorted(pairs, key=lambda tup: tup[1]) # Sort by second element
 Apply a function elementwise to an array and store the result.
 """
 
-def lengths(arr):                         # Procedural 
+def lengths(arr):                         # Procedural
     lengths = []
     for elem in arr:
         lengths.append(len(elem))
@@ -1072,21 +1075,21 @@ def starts_with_m(arr):
     return return_array
 
 ## List comprehension
-def starts_with_m(arr): 
+def starts_with_m(arr):
     return [elem for elem in arr if elem.lower().startswith('m')]
 
 ## Functional
 def starts_with_m(arr):
     return list(filter(lambda elem: elem.lower().startswith('f'), arr))
-       
 
-    
+
+
 ############
 # Iterators
 ############
 
 """
-Finite or infinite streams of data delivered one value at a time that can be looped over and read into 
+Finite or infinite streams of data delivered one value at a time that can be looped over and read into
 data structures (if they are finite).
 """
 
@@ -1116,10 +1119,10 @@ list(itertools.permutations(['a', 'b', 'c'], 2))
 
 for el in itertools.permutations('abc', 2):
     print(el, end=', ')
-    
+
 for el in itertools.repeat('Lololo', 5):
     print(el, end='')
-    
+
 print(list(itertools.starmap(operator.mul, itertools.zip_longest([3, 5, 7], [2, 3], fillvalue=1))))
 
 
@@ -1143,7 +1146,7 @@ def fib(n):                   # Fibonacci sequence as a function...
         print(a)
         a, b = b, a+b
 
-def fib():                    # ... and as a generator 
+def fib():                    # ... and as a generator
     a, b = 0, 1
     while True:
         a, b = b, a+b
@@ -1155,7 +1158,7 @@ next(g)
 for _ in range(5):
     print(next(g))
 
-    
+
 # Lazy generation -- generate Fibonacci sequence on demand
 
 def fibs_under(n):
@@ -1163,7 +1166,7 @@ def fibs_under(n):
         if num > n:
             break
         print(num)
-        
+
 fibs_under(100)
 
 
@@ -1201,17 +1204,17 @@ class Employee:
         self.last = last
         self.pay = pay
         self.email = first + '.' + last + '@company.com'
-        
+
         # Increment num_employees each time instance is created
         Employee.num_employees += 1
-        
+
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
-    
+
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amount)
 
-    
+
 # Create an instance of the Employee class
 emp_1 = Employee('Fabian', 'Gunzinger', 50000)
 emp_2 = Employee('Molly', 'Janz', 60000)
@@ -1251,7 +1254,7 @@ np.fromiter((x*x for x in range(5)), int)
 
 arr = np.array([[1, 2, 3], [4, 5, 6]])
 arr
-np.sum(arr, axis=0)  # Sum along rows - sums vertically (down along rows)  
+np.sum(arr, axis=0)  # Sum along rows - sums vertically (down along rows)
 np.sum(arr, axis=1)  # Sum along axis - sums horizontally (across along columns)
 
 
@@ -1287,7 +1290,7 @@ Good:
 with open('file.txt') as f:  # Do this instead (closes f even if error is raised inside with block)
     for line in f:
         print line
-        
+
 with open('name_of_file.txt', mode='r') as file:
     print(file.read())
 
@@ -1377,8 +1380,8 @@ json_data = r.json()
 for key, value in json_data.items():
 	print(key + ":", value)
 
-    
-    
+
+
 # zip
 
 letters = ['a', 'b', 'c']
@@ -1447,7 +1450,7 @@ print(files)
 
 # Concatenating
 
-df = pd.concat([df1, df1]) # Row-wise concatenation 
+df = pd.concat([df1, df1]) # Row-wise concatenation
 df = pd.concat([df1, df1], ignore_index=True) # To reset index
 df = pd.concat([df1, df2], axis=1) #Column-wise concatenation
 df = pd.concat([df1, df2], axis=1, join='outer') # Default
@@ -1491,7 +1494,7 @@ pd.merge(df1, df2, how='inner')	# Inner join, retain intersection (default)
 tx_weather_ffill = pd.merge_ordered(austin, houston, on='date', suffixes=['_aus', '_hus'], fill_method='ffill')
 
 
-# Before merging, use df2 index to reindex df1, and drop values that don't appear in df1 but do in df2. 
+# Before merging, use df2 index to reindex df1, and drop values that don't appear in df1 but do in df2.
 df1.reindex(df2.index).dropna()
 df.sort_index()
 
@@ -1519,7 +1522,7 @@ df['weekday'].unique()		# List of unique values
 df['weekday'].nunique()		# Number of unique values
 df['weekday'].value_counts() 	# Number of observations per unique value
 
-rowtotals = df.sum(axis='columns')		# Calculating row totals 
+rowtotals = df.sum(axis='columns')		# Calculating row totals
 
 # Create a Boolean Series that is True when 'Edition' is between 1952 and 1988: during_cold_war
 during_cold_war = (medals.Edition >= 1952) & (medals.Edition <= 1988)
@@ -1603,7 +1606,7 @@ CA_TX_month2 = sales.loc[(['CA', 'TX'], 2), :]
 # Access the inner month index and look up data for all states in month 2: all_month2
 all_month2 = sales.loc[(slice(None), 2), :]
 # Create alias for pd.IndexSlice: idx and print all the data on medals won by the United Kingdom
-idx = pd.IndexSlice 
+idx = pd.IndexSlice
 print(medals_sorted.loc[idx[:, 'United Kingdom'], :])
 
 
@@ -1664,7 +1667,7 @@ election['color'] = election.winner.map(red_vs_blue)
 
 # Melting and pivoting
 
-data = {'treatment': ['A', 'B'], 
+data = {'treatment': ['A', 'B'],
 		'F': [5, 8],
 		'M': [3, 9]}
 df = pd.DataFrame(data)
@@ -1673,13 +1676,13 @@ print(pd.melt(df))
 print(pd.melt(df, id_vars='treatment'))
 melted = pd.melt(frame=df, id_vars=['treatment'], var_name='gender', value_name='responses')
 print(melted)
-print(melted.pivot_table(index='treatment', 
+print(melted.pivot_table(index='treatment',
 						values='responses',
 						aggfunc=np.sum))
-print(melted.pivot_table(index='treatment', 
+print(melted.pivot_table(index='treatment',
 						columns='gender'))
 print(melted.pivot_table(index='treatment',
-						columns=['gender'], 
+						columns=['gender'],
 						values=['responses']))
 
 
@@ -1857,7 +1860,7 @@ daily_departures = dallas.resample('D').sum()
 mask = df['Destination Airport'] == 'LAX'
 # Use the mask to subset the data: la
 la = df[mask]
-# Combine two columns of data to create a datetime series: times_tz_none 
+# Combine two columns of data to create a datetime series: times_tz_none
 times_tz_none = pd.to_datetime(la['Date (MM/DD/YYYY)'] + ' ' + la['Wheels-off Time'] )
 # Localize the time to US/Central: times_tz_central
 times_tz_central = times_tz_none.dt.tz_localize('US/Central')
@@ -1930,7 +1933,7 @@ plt.subplot(2,2,1)
 # Plot in blue the % of degrees awarded to women in the Physical Sciences
 plt.plot(year, physical_sciences, color='blue')
 plt.title('Physical Sciences')
-# Make the top right subplot active in the current 2x2 subplot grid 
+# Make the top right subplot active in the current 2x2 subplot grid
 plt.subplot(2,2,2)
 # Plot in red the % of degrees awarded to women in Computer Science
 plt.plot(year, computer_science, color='red')
@@ -1985,7 +1988,7 @@ _ = plt.ylabel('Petal width (ch)')
 
 
 
-# Line plots / time series 
+# Line plots / time series
 
 df.loc['2002':'2005', ['open', 'close', 'high', 'low']].plot()
 plt.savefig('stocks.png')
@@ -2015,7 +2018,7 @@ plt.plot(view, color='black')
 plt.tight_layout()
 
 
-# Histograms 
+# Histograms
 
 df.plot(kind='hist', y='varname')
 df.plot(kind='hist', y='varname', bins=20, range=(1,8)) # Set bins and range
@@ -2101,7 +2104,7 @@ plt.legend(loc='lower center')
 # Annotations
 
 # Plot with legend as before
-plt.plot(year, computer_science, color='red', label='Computer Science') 
+plt.plot(year, computer_science, color='red', label='Computer Science')
 plt.plot(year, physical_sciences, color='blue', label='Physical Sciences')
 plt.legend(loc='lower right')
 # Compute the maximum enrollment of women in Computer Science: cs_max
@@ -2151,7 +2154,7 @@ plt.ylabel('Miles per gallon [mpg]')
 plt.title('hist2d() plot')
 plt.show()
 
-plt.hexbin(hp, mpg, gridsize=(15, 12),		# Hexagonal bins 
+plt.hexbin(hp, mpg, gridsize=(15, 12),		# Hexagonal bins
 			extent=(40, 235, 8, 48))
 plt.colorbar()
 plt.xlabel('Horse power [hp]')
@@ -2174,8 +2177,8 @@ sns.set()
 
 sns.lmplot(x='weight', y='hp', data=auto)
 sns.lmplot(x='weight', y='hp', data=auto, hue='type')	# Separate lines
-sns.lmplot(x='weight', y='hp', data=auto, col='type')	# Column subplots 
-sns.lmplot(x='weight', y='hp', data=auto, row='type')	# Row subplots 
+sns.lmplot(x='weight', y='hp', data=auto, col='type')	# Column subplots
+sns.lmplot(x='weight', y='hp', data=auto, row='type')	# Row subplots
 
 # Scatter plot with first and second-order regressions
 plt.scatter(auto['weight'], auto['mpg'], label='data', color='red', marker='o')
@@ -2271,7 +2274,7 @@ pcts = np.percentile(df.varname, [25, 50, 75])
 
 # Variance and standard deviation
 
-# The variance is the mean of the squared differences from the mean, the 
+# The variance is the mean of the squared differences from the mean, the
 # std the square root of the variance and in the same units as the data.
 # Array of differences to mean: differences
 differences = versicolor_petal_length - np.mean(versicolor_petal_length)
@@ -2289,8 +2292,8 @@ print(np.sqrt(variance_up), np.std(versicolor_petal_length))
 
 # Covariance and Pearson correlation coefficient
 
-# The covariance is the mean of the product of the differences from the means 
-# of two variables (the difference from the y and x mean for a dot on a 
+# The covariance is the mean of the product of the differences from the means
+# of two variables (the difference from the y and x mean for a dot on a
 # scatter plot). Hence, if both mean differences are relatively high or low (if the data point is relatively large or small on both axes) for most values, the variables are correlated. Otherwise they are uncorrelated.
 # Calculating covariance (via var-covariance matrix)
 covar_matrix = np.cov(x, y)
@@ -2301,7 +2304,7 @@ corr_matrix = np.corrcoef(x, y)
 rho = corr_matrix[0,1]
 
 
-# Simulations 
+# Simulations
 ##############################################################################
 
 
@@ -2313,7 +2316,7 @@ for i in range(100000):
     random_numbers[i] = np.random.random()
 
 
-# Simulate the number of loan defaults out of 100 loans 
+# Simulate the number of loan defaults out of 100 loans
 # Step 1: Create function for Bernoulli trials
 # Step 2: Compute the number of defaults for 1000 simulations
 # Step 3: Plot ECDF
@@ -2371,11 +2374,6 @@ df.to_excel(out_exls, index=False)
 2. Cleaning
 3. Graphical EDA (histograms, swarm plots, ECDFs)
 
-
-
-
-
-
 # Exercises to remember (and eventually delete)
 
 # Me
@@ -2396,7 +2394,7 @@ def speak_excitedly(message, num_exclamations=0, enthusiasm=False):
     if enthusiasm:
         return message.upper()
     return message
-    
+
 speak_excitedly("let's go Stanford", 2, enthusiasm=True)
 speak_excitedly('I love Python', 1)
 
@@ -2404,29 +2402,29 @@ speak_excitedly('I love Python', 1)
 def make_table(key_justify='left', value_justify='right', **table_elements):
     """
     Construct table of key-value pairs specified as keyword arguments.
-    
+
     More elaborate description with example...
     """
-    
+
     # Map from human-readable justifications to .format alignmend specifiers
     justification = {
         'left': '<',
-        'right': '>', 
+        'right': '>',
         'center': '^'
     }
     if key_justify not in justification or value_justify not in justification:
         raise ValueError('Invalid justification specifier. \
                          Choose from {}'.format(list(justification.keys())))
-       
+
     key_alignment_specifier = justification[key_justify]
     value_alignment_specifier = justification[value_justify]
-    
+
     max_key_length = max(len(key) for key in table_elements.keys())
     max_value_length = max(len(value) for value in table_elements.values())
-    
-    # '| ' + padded_key + ' | ' + padded_value + ' |' 
+
+    # '| ' + padded_key + ' | ' + padded_value + ' |'
     total_length = 2 + max_key_length + 3 + max_value_length + 2
-    
+
     print('=' * total_length)
     for key, value in table_elements.items():
         print('| {:{key_align}{key_padding}} | {:{value_align}{value_padding}} |'
@@ -2439,7 +2437,7 @@ def make_table(key_justify='left', value_justify='right', **table_elements):
              )
     print('=' * total_length)
 
-make_table(key_justify='left', value_justify='right', 
+make_table(key_justify='left', value_justify='right',
            name='Fabian',
            surname='Gunzinger',
            fav_movement='Handstand',
@@ -2470,38 +2468,38 @@ def lazy_transpose(m):
 # Create a timeit decorater function
 
 def timeit(fn):
-    """Decorater that prints out the duration the function took to execute. 
-    
+    """Decorater that prints out the duration the function took to execute.
+
     Arguments:
         fn (function) -- The function to time.
     """
-    
+
     def modified_fn(*args, **kwargs):
         before = time.time()
         out = fn(*args, **kwargs)
         after = time.time()
-        
+
         delta = (after - before) * 1000
         print('Function duration: {} ms'.format(delta))
-        
+
         return out
-        
+
     return modified_fn
 
 @timeit
 def slow_fibbi(n):
     """Use recursion to compute the nth Fibbonacci number slowly.
-    
+
     Arguments:
         n (int) -- The index of the Fibonacci number to compute.
     """
     fib = lambda n: fib(n-1) + fib(n-2) if n >= 2 else 1
     return fib(n)
 
-@timeit    
+@timeit
 def fast_fibbi(n):
     """Use a while loop to compute the nth Fibonacci number quickly.
-    
+
     Arguments:
         n (int) -- The index of the Fibonacci numbter to compute.
     """
@@ -2517,12 +2515,12 @@ fast_fibbi(30)
 # Create a timeit decorater function with iterations
 
 def timeit_iter(num_iterations=1):
-    """Decorater that prints out the duration the function took to execute. 
-    
+    """Decorater that prints out the duration the function took to execute.
+
     Arguments:
         num_iterations (int) -- The number of times to run the functions.
     """
-    def wrapper(fn):    
+    def wrapper(fn):
         def modified_fn(*args, **kwargs):
             before = time.time()
 
@@ -2534,15 +2532,15 @@ def timeit_iter(num_iterations=1):
             delta = (after - before) * 1000 / num_iterations
 
             print('Average function duration: {} ms for {} iterations'.format(delta, num_iterations))
-        
-            return out        
+
+            return out
         return modified_fn
     return wrapper
 
 @timeit_iter(num_iterations=10)
 def fast_fibbi(n):
     """Use a while loop to compute the nth Fibonacci number quickly.
-    
+
     Arguments:
         n (int) -- The index of the Fibonacci numbter to compute.
     """
