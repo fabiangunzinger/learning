@@ -29,3 +29,5 @@ dependencies:
   - xlrd
   - jupyterlab
   - h5py
+  - black
+  - nb_black
