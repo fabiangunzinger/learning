@@ -10,6 +10,9 @@ InteractiveShell.ast_node_interactivity = "all"
 # High-resolution plot output for retina displays
 %config InlineBackend.figure_format ='retina'
 
+# Print entire table
+with pd.option_context("display.max_rows", 1000):
+    print( ...)
 
 ###########################################################
 ### Cool stuff
