@@ -1177,7 +1177,7 @@ fibs_under(100)
 """
 Why use classes?
 -----------------
-They allow us to logically group our data and functions in a way that's eary to reuse and easy to build upon.
+They allow us to logically group our data and functions in a way that's easy to reuse and easy to build upon.
 
 By data and functions we mean attributes and methods; so an attribute is data associated with a specific class, a method is a function associated with a specific class.
 

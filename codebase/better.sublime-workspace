@@ -49,13 +49,22 @@
 			}
 		},
 		{
-			"contents": "# Resources\n\n## Data science stuff\n\nCurrent priorities\n\n- Create public GitHub project with synthetic mdb data and write related blog post for applications (work with actual data myself, so I get to know it well, but provide a synthetic dataset for public repo).\n\n- Python data science basics (pandas, matplotlib)\n\n- Work through jvdp and David Robinson posts\n\n\nProjects\n- Build a book / learning sourcing and tracking app [here](https://sirupsen.com/read/)\n- Build a budgeting app\n\nBlogs and general resources\n- [Trey Causey blog](http://treycausey.com)\n- [Robert Chang at Medium](https://medium.com/@rchang)\n- [Jake VanderPlas website](http://vanderplas.com)\n- [Hooked on data](https://hookedondata.org/)\n- [David Robinson](http://varianceexplained.org/posts/)\n- [CloudML a curated list of data science resources](https://www.claoudml.com)\n- [Revolutions](https://blog.revolutionanalytics.com)\n- [Facebook data science research](https://research.fb.com/publications/)\n\nCool stuff to replicate\n- [Jake Vanderplas posts]\n- [Bot or not: end to end data science analysis](http://www.erinshellman.com/bot-or-not/)\n- [Tidy Tuesday](https://www.youtube.com/user/safe4democracy/videos)\n\nApplying to data science jobs\n- [12 things I wish I'd known](https://medium.com/deliberate-data-science/12-things-i-wish-id-known-before-starting-as-a-data-scientist-45989be6300e)\n- [Picking where to work](https://multithreaded.stitchfix.com/blog/2015/03/31/advice-for-data-scientists/)\n- [Erin Shellman on landing a data science job](http://www.erinshellman.com/crushed-it-landing-a-data-science-job/)\n- [Trey Causey interview tips](http://treycausey.com/data_science_interviews.html)\n- [Relevant Quora questions](https://www.quora.com/topic/Data-Science-Interviews)\n- [Interview questions](https://www.quora.com/topic/Statistics-and-Probability-Homework-Question)\n- [What not to do in an interview](https://blog.ellenchisa.com/stuff-ive-messed-up-while-interviewing-1adeb2b0cce6)\n- [Emily Robinson on applying for data science jobs](https://hookedondata.org/advice-for-applying-to-data-science-jobs/)\n\nWorkspace setup\n- [Corey Schafer settings](https://github.com/CoreyMSchafer/dotfiles)\n- [Cookiecutter-data-science](https://github.com/drivendata/cookiecutter-data-science)\n- [AWS basics on coursera](https://www.coursera.org/learn/aws-fundamentals-going-cloud-native#syllabus)\n\nData pipelines\n- [Luigi example - could use to refactor London data](https://github.com/hunterowens/data-pipelines/blob/master/chicago/chicago_permits.ipynb)\n\nPython resources\n- [Awesome Python - list of frameworks, libraries, resources](https://github.com/vinta/awesome-python)\n- [The Hitchhiker's Guide to Python](https://docs.python-guide.org)\n- [Corey Schafer videos](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g)\n- [Coding bat practice problems](https://codingbat.com/python)\n- [Time complexity of common operations](https://wiki.python.org/moin/TimeComplexity?)\n- Python cookbook\n- Fluent Python (on disk)\n\nPython style guides\n- [PEP20 - The Zen of Python](https://www.python.org/dev/peps/pep-0020/)\n- [PEP8 - Python style guide](https://www.python.org/dev/peps/pep-0008/)\n- [PEP8 for humans](https://pep8.org)\n- [Commandline tool to check codestyle](https://github.com/PyCQA/pycodestyle)\n- [Google style guide](http://google.github.io/styleguide/pyguide.html)\n- [Kenneth Reitz thoughts on code style](https://docs.python-guide.org/writing/style/)\n- [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)\n- [EAFP > LBYL](https://devblogs.microsoft.com/python/idiomatic-python-eafp-versus-lbyl/)\n\nPython foundations\n- [Robert Chang](https://github.com/robert8138/python-deliberate-practice) deliberate practice\n- [Pandas Q&A](https://nbviewer.jupyter.org/github/justmarkham/pandas-videos/blob/master/pandas.ipynb)\n- [Dive into Python 3](https://diveintopython3.net/index.html)\n\nMore advanced Python\n- Fluent Python book (recommended by Jakob)\n- [Learn x in y minutes on classes and inheritance](https://learnxinyminutes.com/docs/python3/)\n- [Corey Schafer videos](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g)\n- [The Hitchhiker's Guide to Python](https://docs.python-guide.org)\n\nMaths and stats foundations\n- [Mathematical biostats bootcamp](https://www.coursera.org/learn/biostatistics) (highly recommended by Erin Shellman: 'Don’t spend too much of your time watching the lectures.  Instead test yourself with the quizzes and assignments and watch the videos in areas where you are weak.')\n- Aim: very strong foundations of basic frequentist stats (incl. linear regression) and ability to perform basic tasks in Python (use my mathematical stats book as basis as well as Casella and Berger)\n- [Strang's MIT course](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)\n- Gelman and Hill data analysis book (order from Amazon)\n- [Regression diagnostics](https://github.com/erykml/medium_articles/blob/master/Statistics/linear_regression_assumptions.ipynb)\n- [Basic descriptive stats](https://realpython.com/python-statistics/)\n\nBayesian stats\n- [Bayesian stats for hackers - looks great](https://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)\n- [David Robinson ebook on Empirical Bayes](http://varianceexplained.org/r/empirical-bayes-book/)\n- [Eric Ma Bayesian stats lecture](https://ericmjl.github.io/teaching/)\n- [jvdp series](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/)\n\nMachine learning\n- Applied predictive modelling\n- [Stanford CS229](http://cs229.stanford.edu/syllabus.html)\n- [Stanford CS221](https://stanford-cs221.github.io/autumn2019/#coursework)\n- [The hundred page machine learning book](http://themlbook.com)\n- [Machine learning for economists](https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433)\n- [jvdp scikit-learn tutorial](https://github.com/jakevdp/sklearn_tutorial)\n- [Learning from data Caltech](https://work.caltech.edu/lectures.html#lectures)\n- [Data camp course](https://www.coursera.org/learn/linear-algebra-machine-learning/home/welcome)\n- [Ng Stanford course](https://www.coursera.org/learn/machine-learning) (Useful to build familiarity and intuition, which can be helpful in data science phone screens)\n- [Machine learning done wrong](https://ml.posthaven.com/machine-learning-done-wrong)\n\nData engineering\n- [Robert Chang](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-i-4227c5c457d7) intro series\n- [Stanford database mooc](https://cs.stanford.edu/people/widom/DB-mooc.html)\n- [What's a data stack?](https://medium.com/@foundinblank/whats-a-data-stack-7c96f7a15fe8)\n- [Trey Causey on engineering for data scientists](http://treycausey.com/software_dev_skills.html)\n- [Building analytics at 500px](https://medium.com/@samson_hu/building-analytics-at-500px-92e9a7005c83)\n- [Interactive map of data engineering ecosystem](https://blog.insightdatascience.com/the-data-engineering-ecosystem-an-interactive-map-b682627c2534)\n\nExperiments\n- [Guidelines for A/B testing](https://hookedondata.org/guidelines-for-ab-testing/)\n- [So you need a statistically significant sample](http://multithreaded.stitchfix.com/blog/2015/05/26/significant-sample/)\n- [Experiments at Airbnb](https://medium.com/airbnb-engineering/experiments-at-airbnb-e2db3abf39e7#.miqyczkzb)\n- [When not to trust A/B test results](https://www.quora.com/When-should-A-B-testing-not-be-trusted-to-make-decisions/answer/Edwin-Chen-1?srid=sL8&share=1)\n\nCausal analysis (non-experimental)\n- [causalinference](https://laurencewong.com/software)\n- [Degenerate stats series](http://www.degeneratestate.org/posts/2018/Mar/24/causal-inference-with-python-part-1-potential-outcomes/)\n- [Mostly harmless big data](https://ocw.mit.edu/courses/economics/14-387-applied-econometrics-mostly-harmless-big-data-fall-2014/lecture-and-recitation-notes/)\n- [Adam Kelleher series on causal analysis](https://medium.com/causal-data-science/causal-data-science-721ed63a4027)\n- [Simpson's paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox)\n- [Judea Pearl book](http://bayes.cs.ucla.edu/BOOK-2K/)\n- [Imbens and Rubin](https://www.amazon.co.uk/Causal-Inference-Statistics-Biomedical-Sciences/dp/0521885884/ref=sr_1_fkmr0_1?keywords=Causal+Inference+for+Statistics%2C+Social%2C+and+Biomedical+Sciences%3A+An+Introduction+1st+Edition&qid=1581345608&sr=8-1-fkmr0)\n\nEconometrics in R and Python\n- [fixest R package for fast computations](https://cran.r-project.org/web/packages/fixest/index.html)\n\nWeb applications\n- [CS41 python and the web class and lab session](https://stanfordpython.com/#lecture)\n- Tracker for my days (based on RC flask Google API project - use Apple calendar API)\n\nVisualisations\n- The visual display of quantitative information, Edward Tufte\n- Grammar of graphics, Leland Wilkinson\n- Semiology of graphics, Jacques Bertin\n- Seaborn\n- Altair\n\nR (might have to learn at some point)\n- [https://www.datacamp.com/courses/introduction-to-the-tidyverse]\n- Super helpful [reddit](https://www.reddit.com/r/Python/comments/2tkkxd/considering_putting_my_efforts_into_python/) answer.\n\nSQL\n- SQL on learn x in y minutes (see below)\n\nGit\n- versioncontrolbyexample (on disk)\n- [Bitbucket](https://www.atlassian.com/git/tutorials)\n- [Learn Git in Y minutes](https://learnxinyminutes.com/docs/git/)\n\nParallel computing in IPython notebook\n- https://github.com/ipython/ipyparallel\n- Cloudera / pyspark: https://docs.cloudera.com/documentation/enterprise/5-5-x/topics/spark_ipython.html\n- [Sparkmagic](https://github.com/jupyter-incubator/sparkmagic)\n\nCS basics\n[Brilliant](https://brilliant.org/courses/#/science/applied-science)\n[Stanford CS 101](http://web.stanford.edu/class/cs101/syllabus.html)\n[Stanford CS 107](stanford cs107 online)\n[Composing programmes](http://composingprograms.com)\n[Learn X in Y minutes](https://learnxinyminutes.com)\n\nOnline experiments\n- [PlanOut](http://facebook.github.io/planout/)\n\nSharing IPython notebooks\n- [Convert to Latex](http://blog.juliusschulz.de/blog/ultimate-ipython-notebook)\n- [Blog posts](https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/)\n- [Slides](https://rise.readthedocs.io/en/stable/)\n\n\n## Other stuff\n\nWorking and learning better\n- [Simon Horup Eskildsen on how reads](https://sirupsen.com/read/)\n- [Robert Chang on building learning projects](https://medium.com/@rchang/how-i-build-learning-projects-part-i-54dbaad68961)\n- Peak, Anders Ericsson\n- Deep work, Cal Newport\n- Digital minimalism, Cal Newport\n- So good they can't ignore you, Cal Newport\n- Better, Atul Gawande\n- The Checklist manifesto, Atul Gawande\n\nTraining\n\nGeneral\n- James Clear blog\n\nWorking\n- [Getting real](https://basecamp.com/gettingreal/getting-real.pdf)\n\nGood writing to read and reread\n- [Amazon shareholder letters](https://ir.aboutamazon.com/annual-reports)\n- [Berkshire Hathaway shareholder letters](https://www.berkshirehathaway.com/letters/letters.html)\n\nMeditation\n- Seeking the heart to wisdon, Goldstein and Kornfield\n\nSleeping\n- [James Clear](https://jamesclear.com/better-sleep) summarises the science of sleeping.",
 			"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/learning-resources.md",
-			"file_size": 11121,
-			"file_write_time": 132270215820554979,
 			"settings":
 			{
 				"buffer_size": 11106,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# Python basics\n\n## Motivation\n\nI want to be fluent in carrying out basic Python data tasks and want to understand the key concepts (e.g. APIs, philosophies) that underlie the tools I\nuse for this purpose.\n\nIn particular, I want to build fluency in:\n\n- Writing Pythonic code\n- Pandas\n- Data visualisation in Matplotlib, Seaborn, and Altair\n- Object oriented programming\n- Functional programming\n- Testing\n\nI then want to move on to causal analysis and, after that, machine learning:\n\n- Basic statistics in Python\n- Causal analysis in Python\n- Scikit-learn\n\n\n## Goal\n\nExplore mdb data for PhD in best-practice fashion and master basic Pandas operations such that I do to the data whatever I want without having to google much and without producing errors.\n\n\n## Timeline\n\nThe goal is to get through the end of the Pandas syllabus below by the end of February, and then move on to further topics in March. In mid Feb, I'll start reflecting on progress so far and start develop the new curriculum.\n\n\n## Learning approach\n\nTo explore and get familiar with the data I use for my PhD I'll try explore everything in the syllabus directly in the notebook I use for working with this data.\n\n\n## Syllabus\n\nPython basics and writing Pythonic code (w6 and w7)\n- [Stanford CS41](https://stanfordpython.com) (lectures up to Python and the Web and all extra readings)\n- [CS41 idiomatic Python](https://drive.google.com/file/d/0B-eHIhYpHrGDNGZCYUN6SVB1OGc/view)\n\nIPython (w8)\n- [BIDS bootcamp: IPython notebook use](https://www.youtube.com/watch?v=HrylK8I1ALs&index=3&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9)\n- [IPython tips and tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)\n- IPython-Notebook-Shortcuts (on disk)\n- Scientific workflow (BIDS part 12)\n\nNumpy (w9)\n- Numpy in pythonfordataanalysis (pfda)\n\nWeek 10\n- Getting started with pandas in pfda\n- [Dplyr/pandas vignette comparison](https://nbviewer.jupyter.org/gist/TomAugspurger/6e052140eaa5fdb6e8c0)\n\nWeek 11\n- Data cleaning and preparation pdfa\n- Data wrangling in pfda\n- [Pandas videos](https://github.com/justmarkham/pandas-videos): watch tricks, changes, more tricks, best practice\n\nWeek 12\n- Plotting\n- Data aggregation\n- [Pandas videos](https://github.com/justmarkham/pandas-videos): answer each question on my own before checking in pythonfordatascience and video (use this to review concepts)\n\nWeek 13\n- Time series\n- Advanced pandas\n\nWeek 14\n- Key libraries intro\n- Statsmodels\n- Scipy\n- Scikit-learn\n\n\n\nSoftware engineering basics (version control, unit testing)\n\nCode style revision and in depth python understanding\n- fluent-python (on disk) chapter 1\n- [Python tricks](https://github.com/sahands/python-by-example/blob/master/python-by-example.rst)\n- [Nate Batchelder: loop like a native](https://www.youtube.com/watch?time_continue=14&v=EnSu9hHGq5o)\n- [Jeff Knupp: Python's execution mode](https://www.jeffknupp.com/blog/2013/02/14/drastically-improve-your-python-understanding-pythons-execution-model/)\n- Jeff Knupp's idiomatic python\n\nFurther topics:\n- Data visualisation\n- Object oriented programming\n- Functional programming\n- Testing\n- And then causal analysis, stats, and machine learning.\n\n\n## Log\n\nWeek 9\n- First tidy Tuesday challenge (I spend an hour with the data myself and then compare my approach to David Robinson's, and then learn how to do what like best about his approach in Python).\n- Reading numpy chapter in pfda\n\nWeek 8:\n- [BIDS bootcamp: IPython notebook use](https://www.youtube.com/watch?v=HrylK8I1ALs&index=3&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9)\n- [IPython tips and tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)\n\nWeek 7:\n- [Stanford CS41](https://stanfordpython.com) (lectures up to Python and the Web, and all extra readings)\n- [CS41 idiomatic Python](https://drive.google.com/file/d/0B-eHIhYpHrGDNGZCYUN6SVB1OGc/view)\n\nWeek 6:\n- Completed CS41 up to functional programming (incl. lab sessions)\n- Decided to move working through composingprogrammes.com to a separate project.\n\n",
+			"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/projects/basic_python.md",
+			"file_size": 4081,
+			"file_write_time": 132275486094163687,
+			"settings":
+			{
+				"buffer_size": 4057,
 				"line_ending": "Unix"
 			}
 		},
@@ -65,17 +74,6 @@
 			{
 				"buffer_size": 539,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "# Python basics\n\n## Motivation\n\nI want to be fluent in carrying out basic Python data tasks and want to understand the key concepts (e.g. APIs, philosophies) that underlie the tools I\nuse for this purpose.\n\nIn particular, I want to build fluency in:\n\n- Writing Pythonic code\n- Pandas\n- Data visualisation in Matplotlib, Seaborn, and Altair\n- Object oriented programming\n- Functional programming\n- Testing\n\nI then want to move on to causal analysis and, after that, machine learning:\n\n- Basic statistics in Python\n- Causal analysis in Python\n- Scikit-learn\n\n\n## Goal\n\nExplore mdb data for PhD in best-practice fashion and master basic Pandas operations such that I do to the data whatever I want without having to google much and without producing errors.\n\n\n## Timeline\n\nThe goal is to get through the end of the Pandas syllabus below by the end of February, and then move on to further topics in March. In mid Feb, I'll start reflecting on progress so far and start develop the new curriculum.\n\n\n## Learning approach\n\nTo explore and get familiar with the data I use for my PhD I'll try explore everything in the syllabus directly in the notebook I use for working with this data.\n\n\n## Syllabus\n\nPython basics and writing Pythonic code (w1 and w2)\n- [Stanford CS41](https://stanfordpython.com) (lectures up to Python and the Web and all extra readings)\n- [CS41 idiomatic Python](https://drive.google.com/file/d/0B-eHIhYpHrGDNGZCYUN6SVB1OGc/view)\n\nIPython (w3)\n- [BIDS bootcamp: IPython notebook use](https://www.youtube.com/watch?v=HrylK8I1ALs&index=3&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9)\n- [IPython tips and tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)\n- IPython-Notebook-Shortcuts (on disk)\n- Scientific workflow (BIDS part 12)\n\nPlotting\n\nNumpy (w4)\n- Numpy in pythonfordataanalysis (on disk)\n\nPandas (w4)\n- [Pandas videos](https://github.com/justmarkham/pandas-videos): watch tricks, changes, more tricks, best practice, then answer each question on my own before checking in pythonfordatascience and video.\n- Pandas in pythonfordataanalysis\n- [More resources](https://www.dataschool.io/best-python-pandas-resources/)\n---\n- [CS41 numpy class]\n- [Dplyr/pandas vignette comparison](https://nbviewer.jupyter.org/gist/TomAugspurger/6e052140eaa5fdb6e8c0)\n- [Corey Schafer]\n\n\n\nSoftware engineering basics (version control, unit testing)\n\nCode style revision and in depth python understanding\n- fluent-python (on disk) chapter 1\n- [Python tricks](https://github.com/sahands/python-by-example/blob/master/python-by-example.rst)\n- [Nate Batchelder: loop like a native](https://www.youtube.com/watch?time_continue=14&v=EnSu9hHGq5o)\n- [Jeff Knupp: Python's execution mode](https://www.jeffknupp.com/blog/2013/02/14/drastically-improve-your-python-understanding-pythons-execution-model/)\n- Jeff Knupp's idiomatic python\n\nScipy\n\n\n\nFurther topics:\n- Data visualisation\n- Object oriented programming\n- Functional programming\n- Testing\n- And then causal analysis, stats, and machine learning.\n\n\n## Log\n\n\n\nWeek 8:\n- [BIDS bootcamp: IPython notebook use](https://www.youtube.com/watch?v=HrylK8I1ALs&index=3&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9)\n- [IPython tips and tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)\n\nWeek 7:\n- [Stanford CS41](https://stanfordpython.com) (lectures up to Python and the Web, and all extra readings)\n- [CS41 idiomatic Python](https://drive.google.com/file/d/0B-eHIhYpHrGDNGZCYUN6SVB1OGc/view)\n\nWeek 6:\n- Completed CS41 up to functional programming (incl. lab sessions)\n- Decided to move working through composingprogrammes.com to a separate project.\n\n",
-			"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/projects/basic_python.md",
-			"file_size": 3663,
-			"file_write_time": 132271789865369766,
-			"settings":
-			{
-				"buffer_size": 3663,
 				"line_ending": "Unix"
 			}
 		},
@@ -444,7 +442,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -643,7 +641,7 @@
 						"settings":
 						{
 							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": 33,
+							"bracket_highlighter.clone": -1,
 							"bracket_highlighter.clone_locations":
 							{
 								"close":
@@ -734,61 +732,61 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
@@ -801,6 +799,197 @@
 				},
 				{
 					"buffer": 2,
+					"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/projects/basic_python.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4057,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1995,
+								1995
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2302,
+										2303
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										2233,
+										2234
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 750.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/training-resources.md",
 					"semi_transient": false,
 					"settings":
@@ -900,212 +1089,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/projects/basic_python.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3663,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2268,
-								2268
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										2304,
-										2305
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										2235,
-										2236
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										2302,
-										2303
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										2233,
-										2234
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 780.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1254,56 +1237,56 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
@@ -1895,15 +1878,15 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "habi",
+		"last_filter": "apli",
 		"selected_items":
 		[
 			[
-				"habi",
-				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/habits.sublime-project"
+				"apli",
+				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/applications.sublime-project"
 			],
 			[
-				"hab",
+				"habi",
 				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/habits.sublime-project"
 			],
 			[
@@ -1911,8 +1894,20 @@
 				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/basics.sublime-project"
 			],
 			[
+				"basic",
+				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/basics.sublime-project"
+			],
+			[
+				"better",
+				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/python_basics/codebase/better.sublime-project"
+			],
+			[
 				"phd",
 				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/phd.sublime-project"
+			],
+			[
+				"hab",
+				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/habits.sublime-project"
 			],
 			[
 				"appli",

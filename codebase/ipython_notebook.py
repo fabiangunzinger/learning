@@ -31,6 +31,14 @@ notebooks
 # (Then) shell out to subcommand (e.g. execute file from inside notebook)
 !echo {notebooks[1]}
 
+# Time function calls as they happen with tqdm
+#Replace .map() by .progress_map(), same for .apply() and .applymap()
+
+from tqdm import tqdm_notebook
+tqdm_notebook().pandas()
+
+data['column_1'].progress_map(lambda x: x.count('e'))
+
 
 ###########################################################
 ### Magic functions
