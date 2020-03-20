@@ -1438,11 +1438,13 @@ print(files)
 # NumPy
 ########
 
-
-
-#########
-# Pandas
-#########
+###############################################################################
+###############################################################################
+###############################################################################
+###                                 Pandas
+###############################################################################
+###############################################################################
+###############################################################################
 
 
 # Append
@@ -1511,6 +1513,16 @@ weather3 = weather1.sort_index(ascending=False)
 weather4 = weather1.sort_values('Max TemperatureF')
 # Reindex weather1 (which is quarterly index) using the list year with forward-fill: weather3
 weather3 = weather1.reindex(year).ffill()
+
+
+# List elements in index
+
+## In hierarchical index
+df.index.levels[0]
+
+## If df is a copy from a different index
+## This is somewhat weird (and discussed here: https://github.com/pandas-dev/pandas/issues/2770#issuecomment-29547103). If df is a copy of another df, then using df.index.levels returns the index levels of the original index rather than the copy, which is truly weird, but the below is a workaround that works, just need to remember.
+df.index.get_level_values(0)
 
 
 
