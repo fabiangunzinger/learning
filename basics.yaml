@@ -7,6 +7,7 @@ dependencies:
   - python=3.7
   - matplotlib
   - numpy
+  - black
   - pandas
   - seaborn
   - plotly
@@ -21,7 +22,9 @@ dependencies:
   - nb_black
   - altair=4.0
   - vega_datasets
+  - nb_black
   - notebook
+  - nodejs
   - vega
   - pymc3
   - pandas-datareader
@@ -29,5 +32,4 @@ dependencies:
   - xlrd
   - jupyterlab
   - h5py
-  - black
-  - nb_black
+  - yarn
