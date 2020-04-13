@@ -15,7 +15,7 @@ with pd.option_context("display.max_rows", 1000):
     print( ...)
 
 # Black auto formatting
-%load_ext lab_black
+%load_ext lab_blacker
 
 
 
