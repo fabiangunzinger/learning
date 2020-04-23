@@ -11,12 +11,23 @@ InteractiveShell.ast_node_interactivity = "all"
 %config InlineBackend.figure_format ='retina'
 
 # Print entire table
-with pd.option_context("display.max_rows", 1000):
-    print( ...)
+
+pd.set_option('display.max_columns', None)
+pd.reset_option(“max_columns”)
+
+pd.set_option(“max_colwidth”, None)
+
+pd.set_option("max_rows", None)
+
+pd.set_option(‘precision’, 2)
+
 
 # Black auto formatting
 %load_ext lab_blacker
 
+# Figure settings
+sns.set_style('darkgrid')
+sns.mpl.rcParams['figure.figsize'] = (10.0, 6.0)
 
 
 ###########################################################
