@@ -40,15 +40,22 @@
 	"buffers":
 	[
 		{
-			"contents": "---\ntitle: Core - keeping it all together\nauthor: Fabian Gunzinger\n---\n\n# Current priorities (roughly for this year)\n\nPhD:\n\n- Max out on good work habits\n- Draft of first PhD paper before summer holiday\n\nData science:\n\n- Gain fluency with data-science tasks in Python: munging (pandas), modelling (scikit-learn, scipy, statsmodels), visualisation (matplotlib, seaborn, altair).\n\n\nHealth\n\n- Find a diet that works (helps me stay lean, is efficient to prepare, leaves me satisfied through most of the day).\n\n- Tweak my training slightly to find a routine that helps me make sustained progress, that I enjoy doing, and that avoids overtraining.\n\n- Learn about Keto\n\nPersonal\n\n- Invest in mindfulness\n\n- Spend as little as possible and monitor finances weekly\n\n- Science of performance\n\n\n\n\nRelationships\n\n- Do something nice for M every day (however small)\n\n- Do something nice for MaPa every data (however small)\n\n\n\n# Future projects\n\nData science:\n\n- Invest in learning R in 2021.\n\n\n",
 			"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/core.md",
-			"file_size": 933,
-			"file_write_time": 132328129528031057,
 			"settings":
 			{
 				"buffer_size": 981,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/projects/work-better.md",
+			"settings":
+			{
+				"buffer_size": 2411,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "---"
 			}
 		},
 		{
@@ -61,22 +68,22 @@
 			}
 		},
 		{
-			"contents": "---\ntitle: PhD planner and resources\nauthor: Fabian Gunzinger\n---\n\n# Motto\n\n**First make it work, then make it right, then make it fast and small.**\n\n\n# Current projects\n\n- Machine-learned time preferences\n\n- Scarcity\n\n- Spending patterns and habits\n\n- Returns\n\n\n# Next steps\n\n- Improve coding workflow\n\n- Improve thesis project organisation (look into nbviewer)\n\n- First draft of machine-learned time preferences\n\n\n# Goals\n\n- Present my work at small workshop before summer break 2020.\n\n- Complete draft of first paper before start by end of September 2020.\n\n- Present first paper at a good conference before summer break 2021.\n\n\n# Areas to look into\n\n- Habits\n\n\n# Phd opportunities\n\n- Russell Sage Foundation Summer Institute in Behavioural Economics\n\n- Alan Turin enrichment scheme\n\n\n# Presentations\n\n- [Beamer tips](https://paulgp.github.io/beamer_tips.pdf)\n\n\n\n\n# Research best practice\n\n- [Ganong-Noel public projects](https://github.com/ganong-noel)\n\n- Add a tweet at the beginning (example frey2014persistence).\n\n- from duckworth2019beyond:\n\n- long-follow up periods\n\n- representative large sample\n\n- non-differentilal attrition\n\n- broad outcome measures (to check for compensating behaviour in untargeted variables)\n\n- objectively measurable outcomes\n\n\n# Job market sites\n\n- [AEA jobs](https://www.aeaweb.org/joe/listings)\n\n- [EEA jobs](https://www.eeassoc.org/econjobmarket.php)\n\n-\n\n\n# Admin\n\nWarwick email addresses\n- fabian.gunzinger.19@mail.wbs.ac.uk\n- phd19fg@mail.wbs.ac.uk\n- fabian.gunzinger@warwick.ac.uk\n\nStudent id and user name\n- 1895414\n- u1895414\n\n",
 			"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/phd.md",
-			"file_size": 1568,
-			"file_write_time": 132314419089484118,
 			"settings":
 			{
 				"buffer_size": 1569,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "# Python basics\n\n## Motivation\n\nI want to be fluent in carrying out basic Python data tasks and want to understand the key concepts (e.g. APIs, philosophies) that underlie the tools I\nuse for this purpose.\n\nIn particular, I want to build fluency in:\n\n- Writing Pythonic code\n- Pandas\n- Data visualisation in Matplotlib, Seaborn, and Altair\n- Object oriented programming\n- Functional programming\n- Testing\n\nI then want to move on to causal analysis and, after that, machine learning:\n\n- Basic statistics in Python\n- Causal analysis in Python\n- Scikit-learn\n\n\n## Goal\n\nExplore mdb data for PhD in best-practice fashion and master basic Pandas operations such that I do to the data whatever I want without having to google much and without producing errors.\n\n\n## Timeline\n\nThe goal is to get through the end of the Pandas syllabus below by the end of February, and then move on to further topics in March. In mid Feb, I'll start reflecting on progress so far and start develop the new curriculum.\n\n\n## Learning approach\n\nTo explore and get familiar with the data I use for my PhD I'll try explore everything in the syllabus directly in the notebook I use for working with this data.\n\n\n## Timeline update 22 March 2020\n\nI'm still working on becoming fluent in Pandas. The delay is partially because there were days when I focused on the PhD\nexclusively, and the past week I was unable to work due to the coronavirus. I want to finish the Pandas basics by the end of March, and then move on to machine learning (in case I keep pursuing the machine-learned time-preference idea).\n\n\n## Syllabus\n\nPython basics and writing Pythonic code (w6 and w7)\n- [Stanford CS41](https://stanfordpython.com) (lectures up to Python and the Web and all extra readings)\n- [CS41 idiomatic Python](https://drive.google.com/file/d/0B-eHIhYpHrGDNGZCYUN6SVB1OGc/view)\n\nIPython (w8)\n- [BIDS bootcamp: IPython notebook use](https://www.youtube.com/watch?v=HrylK8I1ALs&index=3&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9)\n- [IPython tips and tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)\n- IPython-Notebook-Shortcuts (on disk)\n- Scientific workflow (BIDS part 12)\n\nNumpy (w9)\n- Numpy in pythonfordataanalysis (pfda)\n\nWeek 10\n- PFDA Chap. 5, getting started with Pandas\n- PFDA Chap. 6, importing data\n- PFDA Chap. 7, data cleaning and preparation\n- PFDA Chap. 8, data wrangling\n- PFDA Chap. 10, data aggregation and group operations\n- PFDA Chap. 11, time series\n- [Dplyr/pandas vignette comparison](https://nbviewer.jupyter.org/gist/TomAugspurger/6e052140eaa5fdb6e8c0)\n\nWeek 11\n- PFDA Chap. 10, data aggregation and group operations\n- PFDA Chap. 12, advanced pandas\n- PFDA Chap. 13, intro to modeling libraries\n- PFDA Chap. 14, data analysis examples\n- PFDA App. A, advanced numpy\n- PFDA App. B, more iPython\n- [Pandas videos](https://github.com/justmarkham/pandas-videos): watch tricks, changes, more tricks, best practice\n\nWeek 12\n- PFDA Chap. 14, data analysis examples\n- PFDA App. A, advanced numpy\n- PFDA App. B, more iPython\n- [Pandas videos](https://github.com/justmarkham/pandas-videos): watch tricks, changes, more tricks, best practice\n\nWeek 13\n- PFDA Chap. 14, data analysis examples\n- PFDA App. A, advanced numpy\n- PFDA App. B, more iPython\n- PFDA Chap. 9, data visualisation\n- PFDA reread key sections\n- [Pandas videos](https://github.com/justmarkham/pandas-videos): answer each question on my own before checking in pythonfordatascience and video (use this to review concepts)\n- [Modern Pandas](https://tomaugspurger.github.io/modern-1-intro)\n\nWeek 14\n- Relax and patch and plan next learning cycle\n\n\nWeek 14\n- For machine learning, use jvdp data science handbook\n- Key libraries intro\n- Statsmodels\n- Scipy\n- Scikit-learn\n\nWeek 15\n- Easter holiday in Sicily\n\n\n\n\nSoftware engineering basics (version control, unit testing)\n\nCode style revision and in depth python understanding\n- fluent-python (on disk) chapter 1\n- [Python tricks](https://github.com/sahands/python-by-example/blob/master/python-by-example.rst)\n- [Nate Batchelder: loop like a native](https://www.youtube.com/watch?time_continue=14&v=EnSu9hHGq5o)\n- [Jeff Knupp: Python's execution mode](https://www.jeffknupp.com/blog/2013/02/14/drastically-improve-your-python-understanding-pythons-execution-model/)\n- Jeff Knupp's idiomatic python\n\n# Further topics:\n- Replicate jvdp posts\n- Tidy Tuesday\n- Data visualisation\n- Object oriented programming\n- Functional programming\nTesting\n- pytest unit test runner for ipython nbs\n- And then causal analysis, stats, and machine learning.\n\n\n## Log\n\nWeek 13:\n- PFDA Chap. 14, data analysis examples (first three and extra work)\n\nWeek 12:\n- Coronavirus moving and re-adjustment\n\nWeek 11:\n- PFDA Chap. 10, data aggregation and group operations\n- PFDA Chap. 12, advanced pandas\n- PFDA Chap. 13, intro to modeling libraries\n\nWeek 10:\n- PFDA Chap. 5, getting started with Pandas\n- PFDA Chap. 6, importing data\n- PFDA Chap. 7, data cleaning and preparation\n- PFDA Chap. 8, data wrangling\n- PFDA Chap. 11, time series\n- [Dplyr/pandas vignette comparison](https://nbviewer.jupyter.org/gist/TomAugspurger/6e052140eaa5fdb6e8c0)\n\nWeek 9\n- First tidy Tuesday challenge (I spend an hour with the data myself and then compare my approach to David Robinson's, and then learn how to do what like best about his approach in Python).\n- Reading numpy chapter in pfda\n\nWeek 8:\n- [BIDS bootcamp: IPython notebook use](https://www.youtube.com/watch?v=HrylK8I1ALs&index=3&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9)\n- [IPython tips and tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)\n\nWeek 7:\n- [Stanford CS41](https://stanfordpython.com) (lectures up to Python and the Web, and all extra readings)\n- [CS41 idiomatic Python](https://drive.google.com/file/d/0B-eHIhYpHrGDNGZCYUN6SVB1OGc/view)\n\nWeek 6:\n- Completed CS41 up to functional programming (incl. lab sessions)\n- Decided to move working through composingprogrammes.com to a separate project.\n\n\n\n\n# Workflow\n\nCreate environment\n\nconda create -n python=3.7 matplotlib pandas scikit-learn seaborn\n\n\nSet up project folder\n\n\n\n",
 			"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/projects/basic_python.md",
+			"file_size": 5993,
+			"file_write_time": 132300170923210317,
 			"settings":
 			{
-				"buffer_size": 5993,
-				"encoding": "UTF-8",
+				"buffer_size": 6121,
 				"line_ending": "Unix"
 			}
 		},
@@ -84,7 +91,7 @@
 			"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/data-science.md",
 			"settings":
 			{
-				"buffer_size": 13253,
+				"buffer_size": 13373,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -419,6 +426,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"environm",
+			"work ",
+			"baye",
 			"econometrics",
 			"pats"
 		],
@@ -438,7 +448,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -454,21 +464,12 @@
 						"selection":
 						[
 							[
-								783,
-								783
+								70,
+								70
 							]
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 83,
-								"count": 143,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -487,73 +488,176 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
+								"bh_tag_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 24.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/projects/work-better.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2357,
+								2357
+							]
+						],
+						"settings":
+						{
+							"auto_name": "---",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 653.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/README.md",
 					"semi_transient": false,
 					"settings":
@@ -571,15 +675,6 @@
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 724,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -603,56 +698,56 @@
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
-								"bh_double_quote_content"
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
@@ -660,11 +755,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/phd.md",
 					"semi_transient": false,
 					"settings":
@@ -676,21 +771,12 @@
 						"selection":
 						[
 							[
-								753,
-								753
+								169,
+								169
 							]
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 1,
-								"count": 164,
-								"modified": true,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -714,56 +800,56 @@
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
-								"bh_double_quote_content"
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
@@ -771,24 +857,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/projects/basic_python.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5993,
+						"buffer_size": 6121,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3226,
-								3226
+								6119,
+								6119
 							]
 						],
 						"settings":
@@ -796,7 +882,7 @@
 							"WordCount":
 							{
 								"changes": 0,
-								"count": 744,
+								"count": 759,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -909,94 +995,94 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
+								"bh_tag_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1891.0,
+						"translation.y": 2708.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/data-science.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13253,
+						"buffer_size": 13373,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								387,
-								387
+								2516,
+								2516
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 2,
-								"count": 890,
+								"changes": 62,
+								"count": 893,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -1007,12 +1093,27 @@
 							{
 								"close":
 								{
+									"1":
+									[
+										2516,
+										2517
+									]
 								},
 								"icon":
 								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
 								},
 								"open":
 								{
+									"1":
+									[
+										2442,
+										2443
+									]
 								},
 								"unmatched":
 								{
@@ -1020,69 +1121,69 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
+								"bh_tag_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 19.0,
+						"translation.y": 1093.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1149,16 +1250,16 @@
 		"selected_items":
 		[
 			[
+				"data",
+				"data-science.md"
+			],
+			[
 				"rea",
 				"README.md"
 			],
 			[
 				"basic",
 				"projects/basic_python.md"
-			],
-			[
-				"data",
-				"data-science.md"
 			],
 			[
 				"phd",
@@ -1666,9 +1767,21 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "web",
+		"last_filter": "habio",
 		"selected_items":
 		[
+			[
+				"habio",
+				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/habits.sublime-project"
+			],
+			[
+				"habi",
+				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/habits.sublime-project"
+			],
+			[
+				"basi",
+				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/basics.sublime-project"
+			],
 			[
 				"web",
 				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/website.sublime-project"
@@ -1680,14 +1793,6 @@
 			[
 				"websi",
 				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/website.sublime-project"
-			],
-			[
-				"basi",
-				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/basics.sublime-project"
-			],
-			[
-				"habi",
-				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/habits.sublime-project"
 			],
 			[
 				"phd",
