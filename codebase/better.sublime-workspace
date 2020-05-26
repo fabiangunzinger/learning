@@ -76,13 +76,11 @@
 			}
 		},
 		{
-			"contents": "---\ntitle: Data science resources\n---\n\n# Current priorities\n\n- Work through Python for data analysis book.\n\n- Create public GitHub project with synthetic mdb data and write related blog post for applications (work with actual data myself, so I get to know it well, but provide a synthetic dataset for public repo).\n\n- Python data science basics (pandas, matplotlib, etc.)\n\n- Work through jvdp posts\n\n- [Bot or not: end to end data science analysis](http://www.erinshellman.com/bot-or-not/)\n\n\n# Future projects\n\n- [Tidy Tuesday](https://www.youtube.com/user/safe4democracy/videos) and David Robinson approach\n\n\n# Blogs and general resources\n\n- [Trey Causey blog](http://treycausey.com)\n\n- [Robert Chang at Medium](https://medium.com/@rchang)\n\n- [Jake VanderPlas website](http://vanderplas.com)\n\n- [Hooked on data](https://hookedondata.org/)\n\n- [David Robinson](http://varianceexplained.org/posts/)\n\n- [CloudML a curated list of data science resources](https://www.claoudml.com)\n\n- [Revolutions](https://blog.revolutionanalytics.com)\n\n- [Facebook data science research](https://research.fb.com/publications/)\n\n- [Alex Albright](http://thelittledataset.com)\n\n- [Simple Statistics (R focused)](https://simplystatistics.org)\n\n- [Tom Augsberger's datas-frame](https://tomaugspurger.github.io/archives.html)\n\n- [List of data science blogs](https://github.com/rushter/data-science-blogs)\n\n\n# Research publications\n\n- [Facebook data science research](https://research.fb.com/publications/)\n\n\n# Applying to data science jobs\n\n- [12 things I wish I'd known](https://medium.com/deliberate-data-science/12-things-i-wish-id-known-before-starting-as-a-data-scientist-45989be6300e)\n- [Picking where to work](https://multithreaded.stitchfix.com/blog/2015/03/31/advice-for-data-scientists/)\n- [Erin Shellman on landing a data science job](http://www.erinshellman.com/crushed-it-landing-a-data-science-job/)\n- [Trey Causey interview tips](http://treycausey.com/data_science_interviews.html)\n- [Relevant Quora questions](https://www.quora.com/topic/Data-Science-Interviews)\n- [Interview questions](https://www.quora.com/topic/Statistics-and-Probability-Homework-Question)\n- [What not to do in an interview](https://blog.ellenchisa.com/stuff-ive-messed-up-while-interviewing-1adeb2b0cce6)\n- [Emily Robinson on applying for data science jobs](https://hookedondata.org/advice-for-applying-to-data-science-jobs/)\n\n\n# Workflow setup\n\n- [Karl Broman tutorials on reproducible research -- great stuff!](https://kbroman.org/pages/tutorials.html)\n\n- [Work efficiently with JupyterLab](https://florianwilhelm.info/2018/11/working_efficiently_with_jupyter_lab/)\n\n- [Jupyter and R-markdown -- look at this soon!](https://grst.github.io/bioinformatics/2019/12/23/reportsrender.html)\n\n- [Corey Schafer settings](https://github.com/CoreyMSchafer/dotfiles)\n\n- [Cookiecutter-data-science](https://github.com/drivendata/cookiecutter-data-science)\n\n- [AWS basics on coursera](https://www.coursera.org/learn/aws-fundamentals-going-cloud-native#syllabus)\n\n- [Vlad Kazantsev on clean Jupyter code](https://www.youtube.com/watch?v=2QLgf2YLlus)\n\n\n\n\nData pipelines\n\n- [Luigi example - could use to refactor London data](https://github.com/hunterowens/data-pipelines/blob/master/chicago/chicago_permits.ipynb)\n\n\n# Python resources\n\n- [Awesome Python - list of frameworks, libraries, resources](https://github.com/vinta/awesome-python)\n\n- [The Hitchhiker's Guide to Python](https://docs.python-guide.org)\n\n- [Corey Schafer videos](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g)\n\n- [Coding bat practice problems](https://codingbat.com/python)\n\n- [Time complexity of common operations](https://wiki.python.org/moin/TimeComplexity?)\n\n- Python cookbook\n\n- Fluent Python (on disk)\n\n\n# Python style guides\n\n- [PEP20 - The Zen of Python](https://www.python.org/dev/peps/pep-0020/)\n\n- [PEP8 - Python style guide](https://www.python.org/dev/peps/pep-0008/)\n\n- [PEP8 for humans](https://pep8.org)\n\n- [Commandline tool to check codestyle](https://github.com/PyCQA/pycodestyle)\n\n- [Google style guide](http://google.github.io/styleguide/pyguide.html)\n\n- [Kenneth Reitz thoughts on code style](https://docs.python-guide.org/writing/style/)\n\n- [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)\n\n- [EAFP > LBYL](https://devblogs.microsoft.com/python/idiomatic-python-eafp-versus-lbyl/)\n\n- [Clean code](https://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)\n\n\nPython foundations\n- [Robert Chang](https://github.com/robert8138/python-deliberate-practice) deliberate practice\n- [Pandas Q&A](https://nbviewer.jupyter.org/github/justmarkham/pandas-videos/blob/master/pandas.ipynb)\n- [Dive into Python 3](https://diveintopython3.net/index.html)\n\n- [Automate the boring stuff with Python](https://automatetheboringstuff.com)\n\nMore advanced Python\n- Fluent Python book (recommended by Jakob)\n- [Learn x in y minutes on classes and inheritance](https://learnxinyminutes.com/docs/python3/)\n- [Corey Schafer videos](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g)\n- [The Hitchhiker's Guide to Python](https://docs.python-guide.org)\n\n- [Think Python](http://greenteapress.com/thinkpython2/html/index.html)\n\n\n# Maths and stats foundations\n\n- [Mathematical biostats bootcamp](https://www.coursera.org/learn/biostatistics) (highly recommended by Erin Shellman: 'Don’t spend too much of your time watching the lectures.  Instead test yourself with the quizzes and assignments and watch the videos in areas where you are weak.')\n\n- Aim: very strong foundations of basic frequentist stats (incl. linear regression) and ability to perform basic tasks in Python (use my mathematical stats book as basis as well as Casella and Berger)\n\n- [Strang's MIT course](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)\n\n- Gelman and Hill data analysis book (order from Amazon)\n\n- [Regression diagnostics](https://github.com/erykml/medium_articles/blob/master/Statistics/linear_regression_assumptions.ipynb)\n\n- [Basic descriptive stats](https://realpython.com/python-statistics/)\n\n- [Practical stats for medical research](https://www.amazon.com/Practical-Statistics-Medical-Research-Statistical/dp/0412276305)\n\n\n# Bayesian stats\n\n- [Bayesian stats for hackers - looks great](https://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)\n\n- [David Robinson ebook on Empirical Bayes](http://varianceexplained.org/r/empirical-bayes-book/)\n\n- [Eric Ma Bayesian stats lecture](https://ericmjl.github.io/teaching/)\n\n- [jvdp series](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/)\n\n- [Gelman intro to Stan](http://www.stat.columbia.edu/~gelman/research/published/stan_jebs_2.pdf)\n\n- [PyStan intro](https://towardsdatascience.com/an-introduction-to-bayesian-inference-in-pystan-c27078e58d53)\n\n- [PyStan docs (see related projects at the bottom)](https://pystan.readthedocs.io/en/latest/)\n\n\n# Machine learning\n\n- [Google machine learning crash-course](https://developers.google.com/machine-learning/crash-course)\n\n- [Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/)\n\n- [Nando de Freitag intro to ml course](https://www.youtube.com/watch?v=pid0lUH467o&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf)\n\n- [The hundred page machine learning book](http://themlbook.com)\n\n- [Machine learning done wrong](https://ml.posthaven.com/machine-learning-done-wrong)\n\n- [Ng Stanford course](https://www.coursera.org/learn/machine-learning) (Useful to build familiarity and intuition, which can be helpful in data science phone screens)\n\n- [Deep Learning textbook by Ian Goodfellow et al.](https://www.deeplearningbook.org)\n\n- [Maximilian Eber ML resources](https://github.com/maximilianeber/ml-resources)\n\n- [Machine learning algorithms from scratch](https://philippmuens.com/tag/code/)\n\n- [Stanford CS229](http://cs229.stanford.edu/syllabus.html)\n\n- [Stanford CS221](https://stanford-cs221.github.io/autumn2019/#coursework)\n\n- [Machine learning for economists](https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433)\n\n- [jvdp scikit-learn tutorial](https://github.com/jakevdp/sklearn_tutorial)\n\n- [Learning from data Caltech](https://work.caltech.edu/lectures.html#lectures)\n\n- [Data camp course](https://www.coursera.org/learn/linear-algebra-machine-learning/home/welcome)\n\n\n# Data engineering\n\n- [Robert Chang](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-i-4227c5c457d7) intro series\n- [Stanford database mooc](https://cs.stanford.edu/people/widom/DB-mooc.html)\n- [What's a data stack?](https://medium.com/@foundinblank/whats-a-data-stack-7c96f7a15fe8)\n- [Trey Causey on engineering for data scientists](http://treycausey.com/software_dev_skills.html)\n- [Building analytics at 500px](https://medium.com/@samson_hu/building-analytics-at-500px-92e9a7005c83)\n- [Interactive map of data engineering ecosystem](https://blog.insightdatascience.com/the-data-engineering-ecosystem-an-interactive-map-b682627c2534)\n\n\n# Experiments\n\n- [Guidelines for A/B testing](https://hookedondata.org/guidelines-for-ab-testing/)\n\n- [So you need a statistically significant sample](http://multithreaded.stitchfix.com/blog/2015/05/26/significant-sample/)\n\n- [Experiments at Airbnb](https://medium.com/airbnb-engineering/experiments-at-airbnb-e2db3abf39e7#.miqyczkzb)\n\n- [When not to trust A/B test results](https://www.quora.com/When-should-A-B-testing-not-be-trusted-to-make-decisions/answer/Edwin-Chen-1?srid=sL8&share=1)\n\n- [PlanOut facebook online experiments app](http://facebook.github.io/planout/)\n\n- Statistics for experiments, Box\n\n- Theory of design of experiments, Cook and Reid\n\n\n\nCausal analysis (non-experimental)\n- [EconML by Microsoft](https://github.com/microsoft/EconML)\n- [causalinference](https://laurencewong.com/software)\n- [Degenerate stats series](http://www.degeneratestate.org/posts/2018/Mar/24/causal-inference-with-python-part-1-potential-outcomes/)\n- [Mostly harmless big data](https://ocw.mit.edu/courses/economics/14-387-applied-econometrics-mostly-harmless-big-data-fall-2014/lecture-and-recitation-notes/)\n- [Adam Kelleher series on causal analysis](https://medium.com/causal-data-science/causal-data-science-721ed63a4027)\n- [Simpson's paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox)\n- [Judea Pearl book](http://bayes.cs.ucla.edu/BOOK-2K/)\n- [Imbens and Rubin](https://www.amazon.co.uk/Causal-Inference-Statistics-Biomedical-Sciences/dp/0521885884/ref=sr_1_fkmr0_1?keywords=Causal+Inference+for+Statistics%2C+Social%2C+and+Biomedical+Sciences%3A+An+Introduction+1st+Edition&qid=1581345608&sr=8-1-fkmr0)\n\n# Econometrics\n\n- [Patsy for quick linear model estimation](https://patsy.readthedocs.io/en/latest/)\n\n- [fixest R and Python package for fast computations](https://cran.r-project.org/web/packages/fixest/index.html)\n\n\n\n# Web applications\n\n- [CS41 python and the web class and lab session](https://stanfordpython.com/#lecture)\n\n- Tracker for my days (based on RC flask Google API project - use Apple calendar API)\n\n\n# Visualisations\n\n- The visual display of quantitative information, Edward Tufte\n\n- Grammar of graphics, Leland Wilkinson\n\n- Semiology of graphics, Jacques Bertin\n\n- Seaborn\n\n- Altair\n\n\n# R\n\n- [hipsteR - what to learn when learning R](https://kbroman.org/hipsteR/)\n\n- [R for data science](https://www.amazon.com/R-Data-Science-Hadley-Wickham/dp/1491910399/ref=as_li_ss_tl?ie=UTF8&qid=1469550189&sr=8-1&keywords=R+for+data+science&linkCode=sl1&tag=devtools-20&linkId=6fe0069f9605cf847ed96c191f4e84dd)\n\n- [Alex Albright's amazing resource page](https://thelittledataset.com/data_code/)\n\n- [https://www.datacamp.com/courses/introduction-to-the-tidyverse]\n\n- Super helpful [reddit](https://www.reddit.com/r/Python/comments/2tkkxd/considering_putting_my_efforts_into_python/) answer.\n\n- [Intro to data science using R](https://rafalab.github.io/dsbook/)\n\n\n# SQL\n\n- SQL on learn x in y minutes (see below)\n\n\n# Git\n\n- versioncontrolbyexample (on disk)\n\n- [Bitbucket](https://www.atlassian.com/git/tutorials)\n\n- [Learn Git in Y minutes](https://learnxinyminutes.com/docs/git/)\n\n\n# Parallel computing in IPython notebook\n\n- https://github.com/ipython/ipyparallel\n\n- Cloudera / pyspark: https://docs.cloudera.com/documentation/enterprise/5-5-x/topics/spark_ipython.html\n\n- [Sparkmagic](https://github.com/jupyter-incubator/sparkmagic)\n\n\n# Creating maps\n\n- [Sensitive cities](https://sensitivecities.com/so-youd-like-to-make-a-map-using-python-EN.html#.XmIr3i2cZQI)\n\n\n# CS basics\n\n- [Stanford CS 101](http://web.stanford.edu/class/cs101/syllabus.html)\n\n- [Stanford CS 107](stanford cs107 online)\n\n- [Composing programmes](http://composingprograms.com)\n\n- [Learn X in Y minutes](https://learnxinyminutes.com)\n\n- [Brilliant](https://brilliant.org/courses/#/science/applied-science)\n\n\n# Sharing IPython notebooks\n\n- [Convert to Latex](http://blog.juliusschulz.de/blog/ultimate-ipython-notebook)\n\n- [Blog posts](https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/)\n\n- [Slides](https://rise.readthedocs.io/en/stable/)\n\n\n# Sublime Text (packages I use)\n\n- [Github Sublime Snippets](https://packagecontrol.io/packages/GitHub%20Markdown%20Snippets)\n\n\n# JupyterLab\n\n- [Awesome JupyterLab](https://github.com/mauhai/awesome-jupyterlab)\n\n\n# Cool Python modules\n\n- pandas-datareader: for direct data download from OECD, FRED, stock market data, etc.\n\n\n# Data Science Courses and Bootcamps\n\n- AI Google: https://ai.google/\n\n- Insight Artificial Intelligence Fellows Programme: https://www.insightdata.ai/\n\n- Science to data science: http://www.s2ds.org/\n\n- Python for data science: https://www.edx.org/course/python-for-data-science\n\n- List of relevant bootcamps: https://www.coursereport.com/blog/learn-data-science-at-these-13-bootcamps-and-programs\n\n\n# Building a website\n\n- [Simple site with Github and Jekyll](https://kbroman.org/simple_site/)\n\n# Working with large datasets\n\n- [Software engineering for data scientist -- very useful](https://pythonspeed.com/datascience/)\n",
 			"file": "/Users/fgu/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/better/data-science.md",
-			"file_size": 13913,
-			"file_write_time": 132338422305388953,
 			"settings":
 			{
-				"buffer_size": 14038,
+				"buffer_size": 14113,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -402,7 +400,7 @@
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -461,15 +459,6 @@
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 144,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -550,7 +539,7 @@
 						"translation.y": 67.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -595,31 +584,16 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -630,21 +604,36 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
@@ -652,7 +641,7 @@
 						"translation.y": 731.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -674,6 +663,15 @@
 						],
 						"settings":
 						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 164,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -692,41 +690,6 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -742,19 +705,54 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
-								"bh_square_content"
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 846.0,
+						"translation.y": 999.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -960,7 +958,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -969,23 +967,23 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14038,
+						"buffer_size": 14113,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13228,
-								13228
+								11647,
+								11647
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 0,
-								"count": 936,
+								"changes": 29,
+								"count": 939,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -1014,31 +1012,16 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -1049,26 +1032,41 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 6696.0,
+						"translation.y": 5743.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1079,7 +1077,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -1128,7 +1126,7 @@
 	"project": "better.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1137,6 +1135,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"phd",
+				"phd.md"
+			],
 			[
 				"datas",
 				"data-science.md"
@@ -1156,10 +1158,6 @@
 			[
 				"basic",
 				"projects/basic_python.md"
-			],
-			[
-				"phd",
-				"phd.md"
 			],
 			[
 				"resoum",
@@ -1655,16 +1653,16 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "basi",
+		"last_filter": "habi",
 		"selected_items":
 		[
 			[
-				"basi",
-				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/basics.sublime-project"
-			],
-			[
 				"habi",
 				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/habits.sublime-project"
+			],
+			[
+				"basi",
+				"~/Library/Mobile Documents/com~apple~CloudDocs/fab/projects/_sublime_projects/basics.sublime-project"
 			],
 			[
 				"food",
