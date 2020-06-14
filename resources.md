@@ -4,15 +4,11 @@ title: Data science resources
 
 # Current priorities
 
-- Work through Python for data analysis book.
-
 - Create public GitHub project with synthetic mdb data and write related blog post for applications (work with actual data myself, so I get to know it well, but provide a synthetic dataset for public repo).
 
 - Python data science basics (pandas, matplotlib, etc.)
 
 - Work through jvdp posts
-
-- [Bot or not: end to end data science analysis](http://www.erinshellman.com/bot-or-not/)
 
 
 # Future projects
@@ -88,9 +84,7 @@ title: Data science resources
 - [Vlad Kazantsev on clean Jupyter code](https://www.youtube.com/watch?v=2QLgf2YLlus)
 
 
-
-
-Data pipelines
+# Data pipelines
 
 - [Luigi example - could use to refactor London data](https://github.com/hunterowens/data-pipelines/blob/master/chicago/chicago_permits.ipynb)
 
@@ -135,17 +129,23 @@ Data pipelines
 - [Clean code](https://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 
 
-Python foundations
+# Python foundations
+
 - [Robert Chang](https://github.com/robert8138/python-deliberate-practice) deliberate practice
 - [Pandas Q&A](https://nbviewer.jupyter.org/github/justmarkham/pandas-videos/blob/master/pandas.ipynb)
 - [Dive into Python 3](https://diveintopython3.net/index.html)
 
 - [Automate the boring stuff with Python](https://automatetheboringstuff.com)
 
-More advanced Python
+
+# More advanced Python
+
 - Fluent Python book (recommended by Jakob)
+
 - [Learn x in y minutes on classes and inheritance](https://learnxinyminutes.com/docs/python3/)
+
 - [Corey Schafer videos](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g)
+
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org)
 
 - [Think Python](http://greenteapress.com/thinkpython2/html/index.html)
@@ -187,13 +187,18 @@ More advanced Python
 
 # Machine learning
 
-- [Google machine learning crash-course](https://developers.google.com/machine-learning/crash-course)
-
 - [Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/)
+
+- [Applied predictive modeling](http://appliedpredictivemodeling.com)
+
+- [Google machine learning crash-course](https://developers.google.com/machine-learning/crash-course)
 
 - [Nando de Freitag intro to ml course](https://www.youtube.com/watch?v=pid0lUH467o&list=PLE6Wd9FR--Ecf_5nCbnSQMHqORpiChfJf)
 
 - [The hundred page machine learning book](http://themlbook.com)
+
+
+- [Long list of useful resources from Robert Chang](https://github.com/robert8138/deep-learning-deliberate-practice)
 
 - [Machine learning done wrong](https://ml.posthaven.com/machine-learning-done-wrong)
 
@@ -217,14 +222,21 @@ More advanced Python
 
 - [Data camp course](https://www.coursera.org/learn/linear-algebra-machine-learning/home/welcome)
 
+- [Fast AI course - deep learning course](https://course.fast.ai/index.html)
+
 
 # Data engineering
 
 - [Robert Chang](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-i-4227c5c457d7) intro series
+
 - [Stanford database mooc](https://cs.stanford.edu/people/widom/DB-mooc.html)
+
 - [What's a data stack?](https://medium.com/@foundinblank/whats-a-data-stack-7c96f7a15fe8)
+
 - [Trey Causey on engineering for data scientists](http://treycausey.com/software_dev_skills.html)
+
 - [Building analytics at 500px](https://medium.com/@samson_hu/building-analytics-at-500px-92e9a7005c83)
+
 - [Interactive map of data engineering ecosystem](https://blog.insightdatascience.com/the-data-engineering-ecosystem-an-interactive-map-b682627c2534)
 
 
@@ -246,15 +258,24 @@ More advanced Python
 
 
 
-Causal analysis (non-experimental)
+# Causal analysis (non-experimental)
+
 - [EconML by Microsoft](https://github.com/microsoft/EconML)
+
 - [causalinference](https://laurencewong.com/software)
+
 - [Degenerate stats series](http://www.degeneratestate.org/posts/2018/Mar/24/causal-inference-with-python-part-1-potential-outcomes/)
+
 - [Mostly harmless big data](https://ocw.mit.edu/courses/economics/14-387-applied-econometrics-mostly-harmless-big-data-fall-2014/lecture-and-recitation-notes/)
+
 - [Adam Kelleher series on causal analysis](https://medium.com/causal-data-science/causal-data-science-721ed63a4027)
+
 - [Simpson's paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox)
+
 - [Judea Pearl book](http://bayes.cs.ucla.edu/BOOK-2K/)
+
 - [Imbens and Rubin](https://www.amazon.co.uk/Causal-Inference-Statistics-Biomedical-Sciences/dp/0521885884/ref=sr_1_fkmr0_1?keywords=Causal+Inference+for+Statistics%2C+Social%2C+and+Biomedical+Sciences%3A+An+Introduction+1st+Edition&qid=1581345608&sr=8-1-fkmr0)
+
 
 # Econometrics
 
@@ -289,6 +310,8 @@ Causal analysis (non-experimental)
 
 
 # R
+
+- [Learning R in R](https://swirlstats.com)
 
 - [hipsteR - what to learn when learning R](https://kbroman.org/hipsteR/)
 
@@ -381,6 +404,7 @@ Causal analysis (non-experimental)
 - Python for data science: https://www.edx.org/course/python-for-data-science
 
 - List of relevant bootcamps: https://www.coursereport.com/blog/learn-data-science-at-these-13-bootcamps-and-programs
+
 
 # Web scraping
 
