@@ -24,6 +24,24 @@ I then want to move on to causal analysis and, after that, machine learning:
 
 ## Feature engineering
 
+Resources:
+- APM (Applied predictive modeling)
+- PDSH (Python data science handbook)
+
+Week 23
+- Read PDSH chapter 5
+
+Week 25
+- APM chapter 3
+- APM chapter 18
+- APM chapter 19
+- APM chapter 20
+
+Week 26
+- Build features for MVP of MLBT project
+
+
+
 
 
 ## Python basics and Pandas

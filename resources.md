@@ -309,6 +309,13 @@ title: Data science resources
 - Altair
 
 
+# Feature engineering
+
+- Applied predictive modeling, chapters 3, 18, 19, 20
+
+- Python data science handbook, chapter 5
+
+
 # R
 
 - [Learning R in R](https://swirlstats.com)
