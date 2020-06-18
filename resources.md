@@ -197,7 +197,6 @@ title: Data science resources
 
 - [The hundred page machine learning book](http://themlbook.com)
 
-
 - [Long list of useful resources from Robert Chang](https://github.com/robert8138/deep-learning-deliberate-practice)
 
 - [Machine learning done wrong](https://ml.posthaven.com/machine-learning-done-wrong)
