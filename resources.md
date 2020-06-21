@@ -67,6 +67,28 @@ title: Data science resources
 - [Emily Robinson on applying for data science jobs](https://hookedondata.org/advice-for-applying-to-data-science-jobs/)
 
 
+# Data Science
+
+- Python for data analysis
+
+- Python data science handbook
+
+- Data Science from Scratch
+
+
+# Data Science bootcamps
+
+- AI Google: https://ai.google/
+
+- Insight Artificial Intelligence Fellows Programme: https://www.insightdata.ai/
+
+- Science to data science: http://www.s2ds.org/
+
+- Python for data science: https://www.edx.org/course/python-for-data-science
+
+- List of relevant bootcamps: https://www.coursereport.com/blog/learn-data-science-at-these-13-bootcamps-and-programs
+
+
 # Workflow setup
 
 - [Karl Broman tutorials on reproducible research -- great stuff!](https://kbroman.org/pages/tutorials.html)
@@ -103,9 +125,15 @@ title: Data science resources
 
 - Python cookbook
 
-- Fluent Python (on disk)
-
 - [Learn python the hard way](https://learnpythonthehardway.org/python3/)
+
+- Fluent Python book (recommended by Jakob, on disk)
+
+- [Learn x in y minutes on classes and inheritance](https://learnxinyminutes.com/docs/python3/)
+
+- [Think Python](http://greenteapress.com/thinkpython2/html/index.html)
+
+- [Joel Grus live coding](https://www.youtube.com/user/joelgrus/videos)
 
 
 # Python style guides
@@ -132,23 +160,12 @@ title: Data science resources
 # Python foundations
 
 - [Robert Chang](https://github.com/robert8138/python-deliberate-practice) deliberate practice
+
 - [Pandas Q&A](https://nbviewer.jupyter.org/github/justmarkham/pandas-videos/blob/master/pandas.ipynb)
+
 - [Dive into Python 3](https://diveintopython3.net/index.html)
 
 - [Automate the boring stuff with Python](https://automatetheboringstuff.com)
-
-
-# More advanced Python
-
-- Fluent Python book (recommended by Jakob)
-
-- [Learn x in y minutes on classes and inheritance](https://learnxinyminutes.com/docs/python3/)
-
-- [Corey Schafer videos](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g)
-
-- [The Hitchhiker's Guide to Python](https://docs.python-guide.org)
-
-- [Think Python](http://greenteapress.com/thinkpython2/html/index.html)
 
 
 # Maths and stats foundations
@@ -186,6 +203,8 @@ title: Data science resources
 
 
 # Machine learning
+
+- Hands on machine learning with Scikit-learn, Keras and TenserFlow
 
 - [Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/)
 
@@ -307,6 +326,10 @@ title: Data science resources
 
 - Altair
 
+- plotly
+
+- plotnine
+
 
 # Feature engineering
 
@@ -398,18 +421,6 @@ title: Data science resources
 
 - pandas-datareader: for direct data download from OECD, FRED, stock market data, etc.
 
-
-# Data Science Courses and Bootcamps
-
-- AI Google: https://ai.google/
-
-- Insight Artificial Intelligence Fellows Programme: https://www.insightdata.ai/
-
-- Science to data science: http://www.s2ds.org/
-
-- Python for data science: https://www.edx.org/course/python-for-data-science
-
-- List of relevant bootcamps: https://www.coursereport.com/blog/learn-data-science-at-these-13-bootcamps-and-programs
 
 
 # Web scraping
