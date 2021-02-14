@@ -15,7 +15,7 @@ SELECT DISTINCT col_values FROM table;
 # Counting
 
 SELECT COUNT(*) FROM table;				# Count rows of table
-SELECT COUNT(col) FROM table;			# Count on-missing values in col
+SELECT COUNT(col) FROM table;			# Count non-missing values in col
 SELECT COUNT(DISTINCT col) FROM table;	# Count distinct values in col
 
 
@@ -69,7 +69,7 @@ WHERE name NOT LIKE 'A%';
 
 # Aggregate functions
 
-SELECT AVG(budget)		# Also MAX, MIN, SUM, 
+SELECT AVG(budget)		# Also MAX, MIN, SUM,
 FROM films;
 
 
@@ -134,18 +134,18 @@ RENAME COLUMN old_name TO new_name;
 DROP TABLE table_name
 
 
-# Insert values 
+# Insert values
 
-INSERT INTO transactions (transaction_date, amount, fee) 
+INSERT INTO transactions (transaction_date, amount, fee)
 VALUES ('2018-09-24', 5454, '30');
 
-SELECT transaction_date, amount + CAST(fee AS integer) AS net_amount 
+SELECT transaction_date, amount + CAST(fee AS integer) AS net_amount
 FROM transactions;
 
 # Migrating data
 
-INSERT INTO target_table 
-SELECT DISTINCT column_names 
+INSERT INTO target_table
+SELECT DISTINCT column_names
 FROM source_table;
 
 
@@ -157,12 +157,12 @@ FROM source_table;
 
 # Attribute constraints
 
-ALTER TABLE professors 
-ALTER COLUMN firstname 
+ALTER TABLE professors
+ALTER COLUMN firstname
 TYPE varchar(16)
 USING SUBSTRING(firstname FROM 1 FOR 16)
 
-ALTER TABLE professors 
+ALTER TABLE professors
 ALTER COLUMN firstname
 SET NOT NULL;
 
@@ -188,7 +188,7 @@ ALTER TABLE affiliations
 DROP CONSTRAINT affiliations_organizations_id_fkey;
 
 ALTER TABLE professors
-ADD COLUMN ID serial 
+ADD COLUMN ID serial
 
 UPDATE table_name
 SET new_var = CONCAT(v1, v2);
@@ -213,16 +213,16 @@ WHERE affiliations.firstname = professors.firstname AND affiliations.lastname = 
 # Referential integrity
 
 CREATE TABLE a (
-	id integer PRIMARY KEY, 
-	col_a, varchar(64), 
-	..., 
+	id integer PRIMARY KEY,
+	col_a, varchar(64),
+	...,
 	b_id integer REFERENCES b (id) VIOLATION SETTING)
 # Where violation setting is one of the following:
 # ON DELETE NO ACTION: 	Deleting id in b that's referenced in a throws error
 # ON DELETE CASCADE:	Deleting id in b deletes references in all tables
 # RESTRICT:				Similar to no action
 # SET NULL				Set referencing column to null
-# SET DEFAULT			Set referencing column to default 
+# SET DEFAULT			Set referencing column to default
 
 
 

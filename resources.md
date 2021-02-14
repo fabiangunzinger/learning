@@ -16,36 +16,20 @@ title: Data science resources
 - [Tidy Tuesday](https://www.youtube.com/user/safe4democracy/videos) and David Robinson approach
 
 
-# Blogs and general resources
-
-- [Trey Causey blog](http://treycausey.com)
-
-- [Robert Chang at Medium](https://medium.com/@rchang)
-
-- [Jake VanderPlas website](http://vanderplas.com)
-
-- [Hooked on data](https://hookedondata.org/)
-
-- [David Robinson](http://varianceexplained.org/posts/)
-
-- [CloudML a curated list of data science resources](https://www.claoudml.com)
-
-- [Revolutions](https://blog.revolutionanalytics.com)
-
-- [Facebook data science research](https://research.fb.com/publications/)
-
-- [Alex Albright](http://thelittledataset.com)
-
-- [Simple Statistics (R focused)](https://simplystatistics.org)
-
-- [Tom Augsberger's datas-frame](https://tomaugspurger.github.io/archives.html)
-
-- [List of data science blogs](https://github.com/rushter/data-science-blogs)
+# Python topics
+- [On sys.exit(main()) and main(argv=None) patterns](https://www.artima.com/weblogs/viewpost.jsp?thread=4829)
 
 
-# Research publications
+# Unit testing
+- [Pytest](https://docs.pytest.org/en/stable/contents.html)
+- [Unit testing for data science](https://towardsdatascience.com/unit-testing-for-data-scientists-dc5e0cd397fb)
 
-- [Facebook data science research](https://research.fb.com/publications/)
+
+# Project organisation
+
+- [Jean-Paul Calderone](http://as.ynchrono.us/2007/12/filesystem-structure-of-python-project_21.html)
+- [Real Python](https://realpython.com/python-application-layouts/)
+- [Deal simple python](https://dev.to/codemouse92/dead-simple-python-project-structure-and-imports-38c6)
 
 
 # Applying to data science jobs
@@ -67,7 +51,7 @@ title: Data science resources
 - [Emily Robinson on applying for data science jobs](https://hookedondata.org/advice-for-applying-to-data-science-jobs/)
 
 
-# Data Science
+# Data Science in Python
 
 - Python for data analysis
 
@@ -91,6 +75,8 @@ title: Data science resources
 
 # Workflow setup
 
+- [JVDP Jupyter workflow](http://jakevdp.github.io/blog/2017/03/03/reproducible-data-analysis-in-jupyter/)
+
 - [Karl Broman tutorials on reproducible research -- great stuff!](https://kbroman.org/pages/tutorials.html)
 
 - [Work efficiently with JupyterLab](https://florianwilhelm.info/2018/11/working_efficiently_with_jupyter_lab/)
@@ -105,6 +91,10 @@ title: Data science resources
 
 - [Vlad Kazantsev on clean Jupyter code](https://www.youtube.com/watch?v=2QLgf2YLlus)
 
+
+# Regular expressions
+
+- [RexEgg](https://www.rexegg.com)
 
 # Data pipelines
 
@@ -180,10 +170,6 @@ title: Data science resources
 
 - [Regression diagnostics](https://github.com/erykml/medium_articles/blob/master/Statistics/linear_regression_assumptions.ipynb)
 
-- [Basic descriptive stats](https://realpython.com/python-statistics/)
-
-- [Practical stats for medical research](https://www.amazon.com/Practical-Statistics-Medical-Research-Statistical/dp/0412276305)
-
 
 # Bayesian stats
 
@@ -200,6 +186,11 @@ title: Data science resources
 - [PyStan intro](https://towardsdatascience.com/an-introduction-to-bayesian-inference-in-pystan-c27078e58d53)
 
 - [PyStan docs (see related projects at the bottom)](https://pystan.readthedocs.io/en/latest/)
+
+
+# Time series
+
+- [Prophet](https://facebook.github.io/prophet/)
 
 
 # Machine learning
@@ -312,9 +303,13 @@ title: Data science resources
 
 # Visualisations
 
+- [Rebecca Barter](http://www.rebeccabarter.com/blog/)
+
 - [Fundamentals of data visualization](https://serialmentor.com/dataviz/)
 
 - [Publicatin-quality plots](http://www.jesshamrick.com/2016/04/13/reproducible-plots/)
+
+- [Getting Plotly to work for Jupyter Lab and Fastpages](https://colab.research.google.com/github/binnisb/blog/blob/master/_notebooks/2020-04-02-Plotly-in-lab.ipynb#scrollTo=TWW5ogvQPEk1))
 
 - The visual display of quantitative information, Edward Tufte
 
@@ -326,12 +321,12 @@ title: Data science resources
 
 - Altair
 
-- plotly
-
 - plotnine
 
 
 # Feature engineering
+
+- [yu2020feature](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.367.249&rep=rep1&type=pdf). Super helpful!
 
 - Applied predictive modeling, chapters 3, 18, 19, 20
 
@@ -358,6 +353,8 @@ title: Data science resources
 
 
 # SQL
+
+- [Tech on the net](https://www.techonthenet.com/sqlite/joins.php)
 
 - SQL on learn x in y minutes (see below)
 
@@ -388,6 +385,7 @@ title: Data science resources
 # CS basics
 
 - [Stanford CS 101](http://web.stanford.edu/class/cs101/syllabus.html)
+- [Online course to above](https://online.stanford.edu/courses/soe-ycscs101-sp-computer-science-101)
 
 - [Stanford CS 107](stanford cs107 online)
 
@@ -398,7 +396,11 @@ title: Data science resources
 - [Brilliant](https://brilliant.org/courses/#/science/applied-science)
 
 
-# Sharing IPython notebooks
+# Blogging with notebooks
+
+- [fastpages](https://fastpages.fast.ai)
+
+- [citing in fastpages](https://drscotthawley.github.io/blog/2020/07/01/Citations-Via-Bibtex.html)
 
 - [Convert to Latex](http://blog.juliusschulz.de/blog/ultimate-ipython-notebook)
 
@@ -422,6 +424,11 @@ title: Data science resources
 - pandas-datareader: for direct data download from OECD, FRED, stock market data, etc.
 
 
+# Makefile
+
+- [Using examples](https://makefiletutorial.com)
+- [Book](https://www.cl.cam.ac.uk/teaching/0910/UnixTools/make.pdf)
+
 
 # Web scraping
 
@@ -431,8 +438,55 @@ title: Data science resources
 # Building a website
 
 - [Simple site with Github and Jekyll](https://kbroman.org/simple_site/)
+- [jupyter with jekyll](http://www.leeclemmer.com/2017/07/04/how-to-publish-jupyter-notebooks-to-your-jekyll-static-website.html)
+- [jupyter with jekyll](https://cduvallet.github.io/posts/2018/03/ipython-notebooks-jekyll)
 
+
+# Data sources
+
+- [Financial data from Quandl](https://www.quandl.com/tools/python)
 
 # Working with large datasets
 
 - [Software engineering for data scientist -- very useful](https://pythonspeed.com/datascience/)
+
+
+# Latex
+
+- [Super helpful latex articles](https://olivierpieters.be/blog/2015/12/04/modular-latex-documents)
+
+
+# Blogs and general resources
+
+- [Trey Causey blog](http://treycausey.com)
+
+- [Robert Chang at Medium](https://medium.com/@rchang)
+
+- [Jake VanderPlas website](http://vanderplas.com)
+
+- [Hooked on data](https://hookedondata.org/)
+
+- [David Robinson](http://varianceexplained.org/posts/)
+
+- [CloudML a curated list of data science resources](https://www.claoudml.com)
+
+- [Revolutions](https://blog.revolutionanalytics.com)
+
+- [Facebook data science research](https://research.fb.com/publications/)
+
+- [Alex Albright](http://thelittledataset.com)
+
+- [Simple Statistics (R focused)](https://simplystatistics.org)
+
+- [Tom Augsberger's datas-frame](https://tomaugspurger.github.io/archives.html)
+
+- [List of data science blogs](https://github.com/rushter/data-science-blogs)
+
+- [Rebecca Barter](http://www.rebeccabarter.com/blog/)
+
+- [Jeff Knupp](https://jeffknupp.com/blog/archives/)
+
+
+# Research publications
+
+- [Facebook data science research](https://research.fb.com/publications/)
