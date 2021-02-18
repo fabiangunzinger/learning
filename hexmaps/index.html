@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+#vis {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body>
+<div id="vis"></div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdn.rawgit.com/olihawkins/d3-hexjson/master/build/d3-hexjson.js"></script>
+<script>
+
+var dataset = [ 5, 10, 15, 20, 25 ];
+
+var w = 500;
+var h = 50;
+
+var svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+
+var circles = svg.selectAll("circle")
+    .data(dataset)
+    .enter()
+    .append("circle")
+
+circles.attr("cx", function(d, i) {
+        return (i * 50) + 25;
+    })
+    .attr("cy", h/2)
+    .attr("r", function(d) {
+            return d;
+        })
+    .attr("fill", "yellow")
+    .attr("stroke", "orange")
+    .attr("stroke-width", 5);
+
+
+
+<!-- d3.json("nuts3.hexjson", function(error, hexjson) { -->
+
+<!-- 	// Set the size and margins of the svg -->
+<!-- 	var margin = {top: 10, right: 10, bottom: 10, left: 10}, -->
+<!-- 		width = 500 - margin.left - margin.right, -->
+<!-- 		height = 420 - margin.top - margin.bottom; -->
+
+<!-- 	// Create the svg element -->
+<!-- 	var svg = d3 -->
+<!-- 		.select("#vis") -->
+<!-- 		.append("svg") -->
+<!-- 		.attr("width", width + margin.left + margin.right) -->
+<!-- 		.attr("height", height + margin.top + margin.bottom) -->
+<!-- 		.append("g") -->
+<!-- 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")"); -->
+
+<!-- 	// Render the hexes -->
+<!-- 	var hexes = d3.renderHexJSON(hexjson, width, height); -->
+
+<!-- 	// Bind the hexes to g elements of the svg and position them -->
+<!-- 	var hexmap = svg -->
+<!-- 		.selectAll("g") -->
+<!-- 		.data(hexes) -->
+<!-- 		.enter() -->
+<!-- 		.append("g") -->
+<!-- 		.attr("transform", function(hex) { -->
+<!-- 			return "translate(" + hex.x + "," + hex.y + ")"; -->
+<!-- 			<!-1- return "translate("hex.x","hex.y")"; -1-> -->
+<!-- 		}); -->
+
+<!-- 	<!-1- // Draw the polygons around each hex's centre -1-> -->
+<!-- 	<!-1- hexmap -1-> -->
+<!-- 	<!-1- 	.append("polygon") -1-> -->
+<!-- 	<!-1- 	.attr("points", function(hex) {return hex.points;}) -1-> -->
+<!-- 	<!-1- 	.attr("stroke", "white") -1-> -->
+<!-- 	<!-1- 	.attr("stroke-width", "2") -1-> -->
+<!-- 	<!-1- 	.attr("fill", "#b0e8f0"); -1-> -->
+
+<!-- 	<!-1- // Add the hex codes as labels -1-> -->
+<!-- 	<!-1- hexmap -1-> -->
+<!-- 	<!-1- 	.append("text") -1-> -->
+<!-- 	<!-1- 	.append("tspan") -1-> -->
+<!-- 	<!-1- 	.attr("text-anchor", "middle") -1-> -->
+<!-- 	<!-1- 	.text(function(hex) {return hex.key;}); -1-> -->
+<!-- }); -->
+
+</script>
+</body>
+</html>
