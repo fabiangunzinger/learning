@@ -18,7 +18,12 @@
 <script src="https://cdn.rawgit.com/olihawkins/d3-hexjson/master/build/d3-hexjson.js"></script>
 <script>
 
+    var dataset;
+
     d3.json("nuts3.hexjson", function(error, hexjson) { 
+
+            // Save data
+            dataset = hexjson;
 
             // Print to console for inspection
             console.log(hexjson)
@@ -39,7 +44,6 @@
 
             // Render the hexes
             var hexes = d3.renderHexJSON(hexjson, width, height);
-            console.log(hexes)
 
             // Bind hexex to g elements of the svg and position them
             var hexmap = svg
@@ -52,16 +56,15 @@
                     });
                
             // Draw the polygons around each hex's centre
-            hexmap
+            var polygons = hexmap
             .append("polygon")
                 .attr("points", function(hex) { return hex.points; })
            .attr("stroke", "white")
             .attr("stroke-width", "2")
-            .attr("fill", "blue");
+            .attr("fill", "green");
 
-            // Highlight g on mouseover
-            hexmap
-             .on("mouseover", function() {
+            polygons
+            .on("mouseover", function() {
                    d3.select(this)
                     .attr("fill", "orange");
                 })
@@ -73,13 +76,13 @@
 
                    
 
-            // Add hex codes as labels
-            hexmap
-            .append("text")
-            .append("tspan")
-            .attr("fill", "white")
-            .attr("text-anchor", "middle")
-                .text(function(hex) { return hex.key; });
+            <!-- // Add hex codes as labels -->
+            <!-- hexmap -->
+            <!-- .append("text") -->
+            <!-- .append("tspan") -->
+            <!-- .attr("fill", "white") -->
+            <!-- .attr("text-anchor", "middle") -->
+            <!--     .text(function(hex) { return hex.key; }); -->
 
         });
 
