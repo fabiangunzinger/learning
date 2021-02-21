@@ -3,31 +3,46 @@ library(shiny)
 library(r2d3)
 library(htmltools)
 
-
-hexjson <- "/Users/fgu/dev/projects/learning/hexmaps/nuts3.hexjson"
-script <- file.path("/Users/fgu/dev/projects/learning/hexmaps/map.js")
-
-
-library(shiny)
-library(r2d3)
+#todo
+# determine svg size
+# label on hover
+# click and color
 
 ui <- fluidPage(
-  inputPanel(
-    sliderInput("bar_max", label = "Max:",
-                min = 0.1, max = 1.0, value = 0.2, step = 0.1)
+  radioButtons(
+    inputId = "geonm",
+    label = "Geography",
+    choices = c("nuts3"),
+    selected = "nuts3"
   ),
-  d3Output("d3")
+  d3Output("d3"),
+  textOutput("msg"),
+  tableOutput("tab")
 )
 
 server <- function(input, output) {
+  
+  data <- reactive({ 
+    path = "/Users/fgu/dev/projects/learning/hexmaps/data"
+    fn = paste0(input$geonm, '.hexjson')
+    fp = file.path(path, fn)
+    print(fp)
+    return(jsonlite::read_json(fp))
+  })
+  
   output$d3 <- renderD3({
     r2d3(
-      data = jsonlite::read_json(hexjson),
+      data = data(),
       script = "./js/map.js",
       dependencies = "d3-hexjson-1.1.0/build/d3-hexjson.min.js"
     )
   })
+
+  output$msg <- reactive({ input$geonm })
+  output$tab <- renderTable({ data() })
 }
 
 shinyApp(ui = ui, server = server)
+
+
 
