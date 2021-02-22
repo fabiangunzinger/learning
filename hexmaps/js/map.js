@@ -9,10 +9,6 @@ var hexmap = svg.selectAll("g")
   return "translate(" + hex.x + ", " + hex.y + ")";
 });
 
-hexmap
-.append("title")
-.text(function(d) { return "This is " + d.key; });
-
 // draw the polygons around each hex's centre
 var polygons = hexmap
 .append("polygon")
@@ -31,7 +27,7 @@ polygons
       .attr("y", ypos)
       .attr("fill", "orange")
       .text(d);
-  });
+  })
 
 polygons
   .on("mouseover", function() {

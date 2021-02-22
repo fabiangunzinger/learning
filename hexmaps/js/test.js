@@ -1,3 +1,12 @@
+
+
+svg.selectAll("rect")
+    .data(mydata)
+    .enter()
+    .append("rect")
+    .attr("height", h)
+    
+
 h = 50;
 
 svg.selectAll("rect")
