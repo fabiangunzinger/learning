@@ -9,10 +9,10 @@ library(htmltools)
 # click and color
 
 ui <- fluidPage(
-  radioButtons(
+  selectInput(
     inputId = "geonm",
     label = "Geography",
-    choices = c("nuts3"),
+    choices = c("nuts3", "lad", "constituencies"),
     selected = "nuts3"
   ),
   d3Output("d3"),

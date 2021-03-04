@@ -27,7 +27,7 @@ polygons
       .attr("y", ypos)
       .attr("fill", "orange")
       .text(d);
-  })
+  });
 
 polygons
   .on("mouseover", function() {
