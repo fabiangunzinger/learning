@@ -20,7 +20,7 @@
 
     var dataset;
 
-    d3.json("data/constituencies.hexjson", function(error, hexjson) { 
+    d3.json("data/lad.hexjson", function(error, hexjson) { 
 
             // Save data
             dataset = hexjson;
@@ -63,19 +63,19 @@
             .attr("stroke-width", "2")
             .attr("fill", "green");
 
-            polygons
-            .append("title")
-                .text(function(d) { return d.n; });
+            <!-- polygons -->
+            <!-- .append("title") -->
+            <!--     .text(function(d) { return d.n; }); -->
 
-            polygons
-            .on("mouseover", function() {
-                   d3.select(this)
-                    .attr("fill", "orange");
-                })
-            .on("mouseout", function() {
-                        d3.select(this)
-                        .attr("fill", "blue");
-                    });
+            <!-- polygons -->
+            <!-- .on("mouseover", function() { -->
+            <!--        d3.select(this) -->
+            <!--         .attr("fill", "orange"); -->
+            <!--     }) -->
+            <!-- .on("mouseout", function() { -->
+            <!--             d3.select(this) -->
+            <!--             .attr("fill", "blue"); -->
+            <!--         }); -->
  
 
                    
@@ -92,7 +92,7 @@
 
 </script>
 
-<p>Change map</p>
+<p>Hi</p>
 
 
 </body>

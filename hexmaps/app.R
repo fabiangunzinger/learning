@@ -3,17 +3,12 @@ library(shiny)
 library(r2d3)
 library(htmltools)
 
-#todo
-# determine svg size
-# label on hover
-# click and color
-
 ui <- fluidPage(
   selectInput(
     inputId = "geonm",
     label = "Geography",
     choices = c("nuts3", "lad", "constituencies"),
-    selected = "nuts3"
+    selected = "lad"
   ),
   d3Output("d3"),
   textOutput("msg"),
@@ -26,7 +21,6 @@ server <- function(input, output) {
     path = "/Users/fgu/dev/projects/learning/hexmaps/data"
     fn = paste0(input$geonm, '.hexjson')
     fp = file.path(path, fn)
-    print(fp)
     return(jsonlite::read_json(fp))
   })
   
@@ -34,7 +28,7 @@ server <- function(input, output) {
     r2d3(
       data = data(),
       script = "./js/map.js",
-      dependencies = "d3-hexjson-1.1.0/build/d3-hexjson.min.js"
+      dependencies = "d3-hexjson-1.1.0/build/d3-hexjson.min.js",
     )
   })
 

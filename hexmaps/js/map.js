@@ -18,22 +18,10 @@ var polygons = hexmap
   .attr("fill", "blue");
 
 polygons
-  .on("click", function(d) {
-    var xpos = parseFloat(d3.select(this).attr(x));
-    var ypos = parseFloat(d3.select(this).attr(y));
-    svg.append("text")
-      .attr("id", "tooltip")
-      .attr("x", xpos)
-      .attr("y", ypos)
-      .attr("fill", "orange")
-      .text(d);
-  });
-
-polygons
   .on("mouseover", function() {
     d3.select(this)
       .attr("stroke-width", "4")
-      .attr("fill", "orange");
+      .attr("fill", "green");
   })
   .on("mouseout", function() {
     d3.select(this)
