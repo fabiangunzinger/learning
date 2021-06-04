@@ -6,21 +6,23 @@ import turtle
 
 
 def move(t, length):
-    """Move turtle t forward by length without leaving a trail."""
+    """Move turtle forward by length without leaving a trail."""
     t.pu()
     t.fd(length)
     t.pd()
 
 
 def polyline(t, length, angle, n):
+    """Draw n line segments with angle between them."""
     for i in range(n):
         t.fd(length)
         t.lt(angle)
 
 
 def arc(t, r, angle):
+    """Draw arc with the given radius and angle."""
     arc_length = (2 * r * math.pi) * (angle / 360)
-    n = int(arc_length  / 3)
+    n = int(arc_length  / 4) + 3
     step_length = arc_length / n
     step_angle = angle / n
     polyline(t, step_length, step_angle, n)
@@ -29,13 +31,13 @@ def arc(t, r, angle):
 def petal(t, r, angle):
     for i in range(2):
         arc(t, r, angle)
-        t.lt(90)
+        t.lt(180 - angle)
 
 
-def flower(t, petals, r, angle):
-    for p in range(petals):
+def flower(t, n, r, angle):
+    for p in range(n):
         petal(t, r, angle)
-        t.lt(int(360/petals))
+        t.lt(int(360/n))
 
 
 if __name__ == '__main__':
@@ -43,11 +45,13 @@ if __name__ == '__main__':
     bob = turtle.Turtle()
 
     move(bob, -100)
-    flower(bob, 7, 100, 30)
+    flower(bob, 7, 60.0, 60.0)
+
     move(bob, 100)
-    flower(bob, 10, 60, 45)
+    flower(bob, 10, 40.0, 80.0)
+
     move(bob, 100)
-    flower(bob, 15, 200, 10)
+    flower(bob, 20, 140.0, 20.0)
 
 
 turtle.mainloop()
