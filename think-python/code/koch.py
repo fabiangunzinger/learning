@@ -2,7 +2,7 @@ import turtle
 
 def koch(t, n):
     """Draw a Koch curve of length n."""
-    if n < 10:
+    if n < 25:
         t.fd(n)
         return
     koch(t, n/3)
@@ -26,6 +26,6 @@ bob = turtle.Turtle()
 bob.pu()
 bob.goto(-150, 90)
 bob.pd()
-snowflake(bob, 300)
+koch(bob, 300)
 
 turtle.mainloop()
