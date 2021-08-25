@@ -219,7 +219,7 @@ title: Data science resources
 
 - [Machine learning algorithms from scratch](https://philippmuens.com/tag/code/)
 
-- [Stanford CS229](http://cs229.stanford.edu/syllabus.html)
+- [Stanford CS229](http://cs228.stanford.edu/syllabus.html)
 
 - [Stanford CS221](https://stanford-cs221.github.io/autumn2019/#coursework)
 
